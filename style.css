@@ -84,7 +84,6 @@ body {
     -moz-osx-font-smoothing: grayscale;
 }
 
-/* Ambient background layers */
 body::before {
     content: "";
     position: fixed;
@@ -181,7 +180,6 @@ a {
     outline-offset: 2px;
 }
 
-/* Focus visible for accessibility */
 a:focus-visible,
 button:focus-visible,
 input:focus-visible,
@@ -192,7 +190,6 @@ textarea:focus-visible,
     border-radius: 4px;
 }
 
-/* Reveal animation */
 .reveal {
     opacity: 0;
     transform: translateY(52px) scale(0.98);
@@ -204,7 +201,6 @@ textarea:focus-visible,
     transform: translateY(0) scale(1);
 }
 
-/* Reduced motion */
 @media (prefers-reduced-motion: reduce) {
     *,
     *::before,
@@ -382,7 +378,6 @@ nav {
 }
 
 /* ---------- DESKTOP NAVIGATION ---------- */
-/* Horizontal menu list on desktop */
 nav ul#sidemenu {
     display: flex;
     align-items: center;
@@ -425,40 +420,63 @@ nav ul#sidemenu li a:hover::after {
     width: 100%;
 }
 
-/* HAMBURGER ICON — HIDDEN ON DESKTOP */
-nav .fa-bars {
-    display: none;
-    color: #fff;
-    font-size: 1.5rem;
-    cursor: pointer;
-    z-index: 10000;
+/* ============================================================
+   HAMBURGER BUTTON — using a dedicated class (not "fa-bars")
+   so FontAwesome won't add a duplicate icon via ::before
+   ============================================================ */
+button.hamburger-btn {
+    display: none; /* hidden on desktop */
     background: transparent;
     border: none;
     padding: 8px;
+    cursor: pointer;
     line-height: 1;
+    color: #fff;
+    z-index: 10000;
+    position: relative;
     transition: transform var(--transition-fast);
+    -webkit-tap-highlight-color: transparent;
 }
 
-nav .fa-bars:hover {
-    transform: scale(1.1);
+button.hamburger-btn i {
+    display: block;
+    font-size: 1.5rem;
+    color: #fff;
+    pointer-events: none;
 }
 
-/* CLOSE BUTTON ITEM — HIDDEN ON DESKTOP */
+button.hamburger-btn:hover {
+    transform: scale(1.08);
+}
+
+/* ============================================================
+   CLOSE BUTTON ITEM — hidden on desktop, visible only in mobile sidebar
+   ============================================================ */
 nav ul#sidemenu li.menu-close-item {
     display: none;
 }
 
-.menu-close {
+button.menu-close {
     background: transparent;
     border: none;
     color: #fff;
-    font-size: 1.6rem;
+    font-size: 1.5rem;
     cursor: pointer;
-    padding: 4px;
+    padding: 6px;
     line-height: 1;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    -webkit-tap-highlight-color: transparent;
 }
 
-/* Mobile overlay (used only when sidebar is active on mobile) */
+button.menu-close i {
+    color: #fff;
+    font-size: 1.5rem;
+    pointer-events: none;
+}
+
+/* Mobile overlay */
 .mobile-overlay {
     position: fixed;
     inset: 0;
@@ -1780,15 +1798,11 @@ form textarea:focus {
     }
 
     /* SHOW HAMBURGER ON MOBILE / TABLET */
-    nav .fa-bars {
+    button.hamburger-btn {
         display: block;
-        color: #fff;
-        font-size: 1.6rem;
-        z-index: 10000;
-        position: relative;
     }
 
-    /* Convert the desktop horizontal menu into a slide-in sidebar */
+    /* Convert nav ul into a slide-in sidebar */
     nav ul#sidemenu {
         background: #0b0f17 !important;
         border-left: 1px solid var(--border-light);
@@ -1822,16 +1836,6 @@ form textarea:focus {
         padding: 0;
         background: transparent;
         border: none;
-    }
-
-    nav ul#sidemenu li.menu-close-item .menu-close {
-        color: #ffffff;
-        font-size: 1.6rem;
-        padding: 8px;
-        background: transparent;
-        border: none;
-        cursor: pointer;
-        line-height: 1;
     }
 
     nav ul#sidemenu li a {
@@ -1874,7 +1878,6 @@ form textarea:focus {
         flex: 1 1 100%;
     }
 
-    /* About / contact columns stack */
     .about-col-1,
     .about-col-2,
     .contact-left,
