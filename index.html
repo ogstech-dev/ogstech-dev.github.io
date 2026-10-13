@@ -1,830 +1,252 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Derrick OG | Business IT &amp; Front-End Developer</title>
-    <!-- Font Awesome for Icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <!-- Google Fonts: Inter + Poppins -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-    <!-- Main Stylesheet -->
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Derrick OG | Business IT & Front-End Developer</title>
+
+  <!-- Font Awesome for Icons -->
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    integrity="sha512-pSELAnCFjVwR7vLy811Ph572D9C3eJuUbW0xGnyZAv3Mv6M6szwMoDcw2wrQ5OXZs1Lc+8VnYmP7OXl++cPQ9Q=="
+    crossorigin="anonymous"
+    referrerpolicy="no-referrer"
+  />
+
+  <!-- Google Fonts: Inter + Poppins -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link
+    rel="preconnect"
+    href="https://fonts.gstatic.com"
+    crossorigin
+  />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Poppins:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet"
+  />
+
+  <!-- Main Stylesheet -->
+  <link rel="stylesheet" href="style.css" />
+
 </head>
 <body>
 
-    <!-- Skip to content for accessibility -->
-    <a href="#about" class="skip-link">Skip to main content</a>
+  <a href="#main" class="skip-link">Skip to main content</a>
 
-    <!-- ============================================================
-         HEADER SECTION
-         ============================================================ -->
-    <header id="header">
-        <div class="container">
-            <nav aria-label="Main navigation">
-                <a href="#header" class="brand" aria-label="Derrick OG home">
-                    <span class="brand-mark" aria-hidden="true">D</span>
-                    <span class="brand-text">Derrick<span>OG</span></span>
-                </a>
+  <header id="header" role="banner" aria-label="Site header">
+    <nav
+      class="nav-container"
+      aria-label="Primary navigation"
+      role="navigation"
+    >
+      <a href="#header" class="brand" aria-label="Navigate to home page">
+        <span class="brand-mark" aria-hidden="true">D</span>
+        <span class="brand-text">
+          Derrick<span>OG</span>
+        </span>
+      </a>
 
-                <div class="mobile-overlay" id="mobileOverlay" onclick="closemenu()" aria-hidden="true"></div>
+      <!-- Mobile sidebar overlay -->
+      <div
+        class="mobile-overlay"
+        id="mobileOverlay"
+        tabindex="-1"
+        aria-hidden="true"
+      ></div>
 
-                <ul id="sidemenu" role="menubar">
-                    <li role="none"><a role="menuitem" href="#header">Home</a></li>
-                    <li role="none"><a role="menuitem" href="#about">About</a></li>
-                    <li role="none"><a role="menuitem" href="#services">Services</a></li>
-                    <li role="none"><a role="menuitem" href="#portfolio">Portfolio</a></li>
-                    <li role="none"><a role="menuitem" href="#contact">Contact</a></li>
-                    <li role="none" class="menu-close-item">
-                        <button class="menu-close" onclick="closemenu()" aria-label="Close menu">
-                            <i class="fas fa-times" aria-hidden="true"></i>
-                        </button>
-                    </li>
-                </ul>
+      <ul
+        id="sidemenu"
+        class="menu"
+        role="menubar"
+        aria-label="Primary menu"
+        tabindex="-1"
+      >
+        <li role="none">
+          <a role="menuitem" href="#header" tabindex="0">Home</a>
+        </li>
+        <li role="none">
+          <a role="menuitem" href="#about" tabindex="0">About</a>
+        </li>
+        <li role="none">
+          <a role="menuitem" href="#services" tabindex="0">Services</a>
+        </li>
+        <li role="none">
+          <a role="menuitem" href="#portfolio" tabindex="0">Portfolio</a>
+        </li>
+        <li role="none">
+          <a role="menuitem" href="#contact" tabindex="0">Contact</a>
+        </li>
+        <li role="none" class="menu-close-item">
+          <button
+            class="menu-close"
+            aria-label="Close menu"
+            aria-controls="sidemenu"
+          >
+            <i class="fas fa-times" aria-hidden="true"></i>
+          </button>
+        </li>
+      </ul>
 
-                <button class="fa-bars" onclick="openmenu()" aria-label="Open menu" aria-expanded="false" aria-controls="sidemenu" id="menuToggle">
-                    <i class="fas fa-bars" aria-hidden="true"></i>
-                </button>
-            </nav>
+      <button
+        class="menu-toggle"
+        id="menuToggle"
+        aria-label="Open menu"
+        aria-haspopup="true"
+        aria-expanded="false"
+        aria-controls="sidemenu"
+      >
+        <i class="fas fa-bars" aria-hidden="true"></i>
+      </button>
+    </nav>
 
-            <div class="header-text">
-                <div class="header-copy">
-                    <p class="eyebrow">Business IT Student &amp; Front-End Developer</p>
-                    <h1>Hi, I'm <span>Derrick OG</span><br>building practical digital systems and modern web experiences.</h1>
-                    <p class="lead">I design and build responsive websites, database-backed interfaces, and time-saving digital workflows for institutions and businesses using HTML, CSS, JavaScript, React, and core IT systems.</p>
+    <div class="header-text" role="main" id="main">
+      <div class="header-copy">
+        <p class="eyebrow">Business IT Student & Front-End Developer</p>
+        <h1>
+          Hi, I'm <span>Derrick OG</span><br />
+          Building practical digital systems and modern web experiences.
+        </h1>
+        <p class="lead">
+          I design and build responsive websites, database-backed
+          interfaces, and time-saving digital workflows for
+          institutions and businesses using HTML, CSS, JavaScript, React, and
+          core IT systems.
+        </p>
 
-                    <div class="hero-actions">
-                        <a href="#portfolio" class="btn">View My Work</a>
-                        <a href="#contact" class="btn btn2">Book a Project</a>
-                    </div>
-
-                    <div class="hero-metrics">
-                        <div>
-                            <strong>3+</strong>
-                            <span>Years in IT &amp; web study</span>
-                        </div>
-                        <div>
-                            <strong>5,000+</strong>
-                            <span>Records automated</span>
-                        </div>
-                        <div>
-                            <strong>99.8%</strong>
-                            <span>Data integrity focus</span>
-                        </div>
-                    </div>
-                </div>
-
-                <aside class="header-panel" aria-label="What I deliver">
-                    <div class="panel-badge">Currently available</div>
-                    <h3>What I deliver</h3>
-                    <ul>
-                        <li>Responsive business websites</li>
-                        <li>Database and workflow automation</li>
-                        <li>Institutional IT support</li>
-                        <li>Clean front-end interfaces</li>
-                    </ul>
-                </aside>
-            </div>
+        <div class="hero-actions">
+          <a href="#portfolio" class="btn">View My Work</a>
+          <a href="#contact" class="btn btn2">Book a Project</a>
         </div>
-    </header>
 
-    <!-- ============================================================
-         HIGHLIGHTS SECTION
-         ============================================================ -->
-    <section class="highlights" aria-labelledby="expertise-heading">
-        <div class="container">
-            <div class="section-heading-wrap">
-                <p class="eyebrow section-eyebrow">Core Expertise</p>
-                <h2 class="section-title" id="expertise-heading">Core Expertise</h2>
-            </div>
-            <div class="highlight-grid">
-                <article class="highlight-card">
-                    <i class="fas fa-database" aria-hidden="true"></i>
-                    <h3>Data systems</h3>
-                    <p>Database-driven solutions and structured records management for institutions and digital operations.</p>
-                </article>
-                <article class="highlight-card">
-                    <i class="fas fa-paint-brush" aria-hidden="true"></i>
-                    <h3>Modern UI</h3>
-                    <p>User-focused interface design with clean layouts, strong hierarchy, and polished front-end experiences.</p>
-                </article>
-                <article class="highlight-card">
-                    <i class="fas fa-cogs" aria-hidden="true"></i>
-                    <h3>Workflow automation</h3>
-                    <p>I simplify repetitive processes and improve operational efficiency through digital tools and system thinking.</p>
-                </article>
-            </div>
+        <div class="hero-metrics" aria-label="Key metrics">
+          <div>
+            <strong>3+</strong>
+            <span>Years in IT & web study</span>
+          </div>
+          <div>
+            <strong>5,000+</strong>
+            <span>Records automated</span>
+          </div>
+          <div>
+            <strong>99.8%</strong>
+            <span>Data integrity focus</span>
+          </div>
         </div>
-    </section>
+      </div>
 
-    <!-- ============================================================
-         ABOUT SECTION
-         ============================================================ -->
-    <section id="about" class="reveal" aria-labelledby="about-heading">
-        <div class="container">
-            <div class="row">
-                <div class="about-col-1">
-                    <img src="projo/projo3.jpeg" alt="Derrick Ogetonto, Business IT student and front-end developer" loading="lazy" width="600" height="800">
-                </div>
-                <div class="about-col-2">
-                    <div class="section-header">
-                        <h2 class="sub-title" id="about-heading">About Me</h2>
-                    </div>
-                    <p>I'm a Business Information Technology student with a strong interest in front-end development, digital systems, and practical technology solutions. My work blends web design, application logic, and database understanding to build responsive interfaces and efficient operational tools. I enjoy turning ideas into clean, functional experiences while improving productivity through automation and strong technical execution.</p>
-
-                    <div class="tab-titles" role="tablist" aria-label="About me sections">
-                        <button class="tab-links active-link" onclick="opentab('skills', event)" role="tab" aria-selected="true" aria-controls="skills" id="tab-skills">
-                            <span class="tab-icon"><i class="fas fa-code" aria-hidden="true"></i></span>
-                            Skills
-                        </button>
-                        <button class="tab-links" onclick="opentab('experience', event)" role="tab" aria-selected="false" aria-controls="experience" id="tab-experience">
-                            <span class="tab-icon"><i class="fas fa-briefcase" aria-hidden="true"></i></span>
-                            Experience
-                        </button>
-                        <button class="tab-links" onclick="opentab('education', event)" role="tab" aria-selected="false" aria-controls="education" id="tab-education">
-                            <span class="tab-icon"><i class="fas fa-graduation-cap" aria-hidden="true"></i></span>
-                            Education
-                        </button>
-                    </div>
-
-                    <div class="tab-contents active-tab" id="skills" role="tabpanel" aria-labelledby="tab-skills">
-                        <div class="skill-group">
-                            <h4>Web Development</h4>
-                            <p>CSS3, Grid/Flexbox, JavaScript (ES6+), HTML5, React.js</p>
-                        </div>
-                        <div class="skill-group">
-                            <h4>OOP &amp; Systems</h4>
-                            <p>Java, C++, C, Database Management Systems</p>
-                        </div>
-                    </div>
-
-                    <div class="tab-contents" id="experience" role="tabpanel" aria-labelledby="tab-experience">
-                        <div class="experience-item">
-                            <div class="exp-header">
-                                <h4>Industrial Attachment – IT Intern</h4>
-                                <span class="exp-date">Aug 2025 – Nov 2025</span>
-                            </div>
-                            <p class="exp-company">Ministry of Education, State Department for Higher Education</p>
-                            <ul class="exp-details">
-                                <li>Automated 5,000+ institutional user records using MySQL scripts, reducing manual management by 85%</li>
-                                <li>Maintained 99.5% LAN infrastructure uptime and achieved 99.8% data integrity via secure backups</li>
-                                <li>Coordinated technical verification and network troubleshooting across multiple departments</li>
-                            </ul>
-                        </div>
-                    </div>
-
-                    <div class="tab-contents" id="education" role="tabpanel" aria-labelledby="tab-education">
-                        <div class="education-item">
-                            <div class="edu-header">
-                                <h4>BSc. Business Information Technology (3rd Year)</h4>
-                                <span class="edu-date">Expected 2027</span>
-                            </div>
-                            <p class="edu-institution">The Cooperative University of Kenya</p>
-                            <p class="edu-focus">Focus: Database Management Systems, Software Engineering, System Design</p>
-                        </div>
-                        <div class="education-item">
-                            <div class="edu-header">
-                                <h4>Diploma in Information Technology (Credit)</h4>
-                                <span class="edu-date">Graduated 2025</span>
-                            </div>
-                            <p class="edu-institution">The Cooperative University of Kenya</p>
-                            <p class="edu-focus">Focus: OOP (Java, C++), Web Development, Database Design</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- ============================================================
-         SERVICES SECTION
-         ============================================================ -->
-    <section id="services" class="reveal" aria-labelledby="services-heading">
-        <div class="container">
-            <h2 class="sub-title" id="services-heading">My Services</h2>
-            <div class="services-list">
-                <div>
-                    <i class="fas fa-code" aria-hidden="true"></i>
-                    <h3>Front-End Development</h3>
-                    <p>Responsive websites and branded interfaces built with HTML, CSS, JavaScript, and React for clean performance and user-friendly experiences.</p>
-                    <a href="#contact">Inquire now</a>
-                </div>
-                <div>
-                    <i class="fas fa-database" aria-hidden="true"></i>
-                    <h3>Database &amp; Workflow Support</h3>
-                    <p>Structured records, system cleanup, and digital workflow improvements to reduce manual work and improve operational efficiency.</p>
-                    <a href="#contact">Inquire now</a>
-                </div>
-                <div>
-                    <i class="fas fa-laptop" aria-hidden="true"></i>
-                    <h3>IT &amp; Web Redesign</h3>
-                    <p>Modern redesigns and technical support for older systems, websites, and internal digital tools that need better usability and speed.</p>
-                    <a href="#contact">Inquire now</a>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- ============================================================
-         PORTFOLIO SECTION
-         ============================================================ -->
-    <section id="portfolio" class="reveal" aria-labelledby="portfolio-heading">
-        <div class="container">
-            <h2 class="sub-title" id="portfolio-heading">My Work</h2>
-            <div class="work-list">
-                <!-- Project 1: Ivy Interactive Portfolio -->
-                <div class="work">
-                    <img src="projo/projo1.png" alt="Ivy Interactive Portfolio homepage preview" loading="lazy" width="600" height="400">
-                    <div class="layer">
-                        <span class="badge badge-blue">Portfolio Design</span>
-                        <h3>Ivy Interactive Portfolio</h3>
-                        <p>A modern portfolio built for strong brand presentation, smooth visual flow, and polished digital storytelling.</p>
-                        <div class="tech-tags">
-                            <span>Netlify</span> <span>UI/UX Design</span> <span>Fluid Grid</span>
-                        </div>
-                        <div class="layer-actions">
-                            <a href="https://ivy-portfolio.netlify.app/" target="_blank" rel="noopener noreferrer" aria-label="Open Ivy portfolio in a new tab"><i class="fas fa-external-link-alt" aria-hidden="true"></i></a>
-                            <button type="button" class="portfolio-trigger" data-image="projo/projo1.png" data-title="Ivy Interactive Portfolio" data-badge="Premium UI Solution" data-description="A cloud-deployed modern portfolio designed for seamless asset delivery, rich typography, and high visual authority." aria-label="Preview Ivy Interactive Portfolio"><i class="fas fa-search" aria-hidden="true"></i></button>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Project 2: Stellular Business Hub -->
-                <div class="work">
-                    <img src="projo/projo2.png" alt="Stellular Business Hub website preview" loading="lazy" width="600" height="400">
-                    <div class="layer">
-                        <span class="badge badge-green">Business Website</span>
-                        <h3>Stellular Business Hub</h3>
-                        <p>A clean business-focused web experience designed for clear messaging, responsive layout, and strong user navigation.</p>
-                        <div class="tech-tags">
-                            <span>Semantic HTML</span> <span>Modern CSS</span> <span>SEO-Ready</span>
-                        </div>
-                        <div class="layer-actions">
-                            <a href="https://stellular-gaufre-97a808.netlify.app/" target="_blank" rel="noopener noreferrer" aria-label="Open Stellular project in a new tab"><i class="fas fa-external-link-alt" aria-hidden="true"></i></a>
-                            <button type="button" class="portfolio-trigger" data-image="projo/projo2.png" data-title="Stellular Business Hub" data-badge="Enterprise Solution" data-description="High-performance modern framework engineered for premium brand conversion and fast loading speeds." aria-label="Preview Stellular Business Hub"><i class="fas fa-search" aria-hidden="true"></i></button>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Project 3: Galaxy Resort Kitengela -->
-                <div class="work">
-                    <img src="projo/projo6.jpg" alt="Galaxy Resort Kitengela website preview" loading="lazy" width="600" height="400">
-                    <div class="layer">
-                        <span class="badge badge-blue">Hospitality Website</span>
-                        <h3>Galaxy Resort Kitengela</h3>
-                        <p>A luxury resort website featuring rooms, dining, events, and spa services with a serene, premium visual identity.</p>
-                        <div class="tech-tags">
-                            <span>Responsive</span> <span>Booking UI</span> <span>Brand Design</span>
-                        </div>
-                        <div class="layer-actions">
-                            <a href="https://chic-scone-d96e36.netlify.app" target="_blank" rel="noopener noreferrer" aria-label="Open Galaxy Resort in a new tab"><i class="fas fa-external-link-alt" aria-hidden="true"></i></a>
-                            <button type="button" class="portfolio-trigger" data-image="projo/projo6.jpg" data-title="Galaxy Resort Kitengela" data-badge="Hospitality Website" data-description="A 4-star luxury resort website showcasing rooms, fine dining, conferences, weddings, and spa facilities with an elegant, serene design." aria-label="Preview Galaxy Resort Kitengela"><i class="fas fa-search" aria-hidden="true"></i></button>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Project 4: Cozy B&B -->
-                <div class="work">
-                    <img src="projo/projo7.jpg" alt="Cozy B&B luxury accommodation website preview" loading="lazy" width="600" height="400">
-                    <div class="layer">
-                        <span class="badge badge-purple">Boutique B&amp;B</span>
-                        <h3>Cozy B&amp;B</h3>
-                        <p>A boutique bed-and-breakfast platform with room showcases, guest testimonials, FAQs, and a warm, inviting aesthetic.</p>
-                        <div class="tech-tags">
-                            <span>Booking UI</span> <span>Testimonials</span> <span>Modern UI</span>
-                        </div>
-                        <div class="layer-actions">
-                            <a href="https://moonlit-haupia-a478d5.netlify.app" target="_blank" rel="noopener noreferrer" aria-label="Open Cozy B&amp;B in a new tab"><i class="fas fa-external-link-alt" aria-hidden="true"></i></a>
-                            <button type="button" class="portfolio-trigger" data-image="projo/projo7.jpg" data-title="Cozy B&amp;B" data-badge="Boutique B&amp;B" data-description="A boutique bed-and-breakfast platform featuring premium room showcases, guest testimonials, comprehensive FAQs, and a warm, inviting aesthetic." aria-label="Preview Cozy B&amp;B"><i class="fas fa-search" aria-hidden="true"></i></button>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Project 5: AI Development Core -->
-                <div class="work">
-                    <img src="projo/projo4.png" alt="AI Development Core Hub screenshot" loading="lazy" width="600" height="400">
-                    <div class="layer">
-                        <span class="badge badge-purple">Systems Architecture</span>
-                        <h3>Development Core</h3>
-                        <p>My working digital environment for project architecture, organized assets, and efficient multi-platform delivery workflows.</p>
-                        <div class="tech-tags">
-                            <span>GitHub Pages</span> <span>Architecture</span> <span>AI Prompting</span>
-                        </div>
-                        <div class="layer-actions">
-                            <a href="https://35600.github.io/derrickogetonto.github.io/" target="_blank" rel="noopener noreferrer" aria-label="Open AI development core in a new tab"><i class="fas fa-code" aria-hidden="true"></i></a>
-                            <button type="button" class="portfolio-trigger" data-image="projo/projo4.png" data-title="AI-Driven Development Core" data-badge="Core Architecture" data-description="My central production environment showcasing rapid asset routing, clean repository architecture, and optimized multi-platform folder structures." aria-label="Preview AI Development Core"><i class="fas fa-search" aria-hidden="true"></i></button>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Project 6: Kiki's Kitchen -->
-                <div class="work">
-                    <img src="projo/projo5.jpg" alt="Kiki's Kitchen restaurant website preview" loading="lazy" width="600" height="400">
-                    <div class="layer">
-                        <span class="badge badge-orange">Food Brand Website</span>
-                        <h3>Kiki's Kitchen</h3>
-                        <p>A vibrant restaurant and food brand landing page focused on appetite appeal, smoother customer trust, and mobile-friendly browsing.</p>
-                        <div class="tech-tags">
-                            <span>Netlify</span> <span>Brand UI</span> <span>Responsive</span>
-                        </div>
-                        <div class="layer-actions">
-                            <a href="https://kikiskitchen.netlify.app/" target="_blank" rel="noopener noreferrer" aria-label="Open Kiki's Kitchen in a new tab"><i class="fas fa-external-link-alt" aria-hidden="true"></i></a>
-                            <button type="button" class="portfolio-trigger" data-image="projo/projo5.jpg" data-title="Kiki's Kitchen" data-badge="Food Brand Website" data-description="A vibrant restaurant and food brand landing page designed to improve appetite appeal, customer trust, and mobile-first browsing performance." aria-label="Preview Kiki's Kitchen"><i class="fas fa-search" aria-hidden="true"></i></button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <a href="https://github.com/DerrickOgetonto" class="btn" target="_blank" rel="noopener noreferrer">See more on GitHub</a>
-        </div>
-    </section>
-
-    <!-- ============================================================
-         CONTACT SECTION
-         ============================================================ -->
-    <section id="contact" class="reveal" aria-labelledby="contact-heading">
-        <div class="container">
-            <div class="row">
-                <div class="contact-left">
-                    <h2 class="sub-title" id="contact-heading">Contact Me</h2>
-                    <p><i class="fas fa-paper-plane" aria-hidden="true"></i> <a href="mailto:derrickogetonto161@gmail.com" class="contact-link">derrickogetonto161@gmail.com</a></p>
-                    <p><i class="fas fa-phone" aria-hidden="true"></i> <a href="tel:+254794994170" class="contact-link">+254 794 994 170</a></p>
-                    <div class="wa-contact-links">
-                        <a href="https://wa.me/254794994170?text=Hello%20Derrick%2C%20I%27d%20like%20to%20discuss%20a%20business%20project%20and%20request%20a%20quote." target="_blank" rel="noopener noreferrer"><i class="fab fa-whatsapp" aria-hidden="true"></i> Business WhatsApp</a>
-                        <a href="https://wa.me/254794994170?text=Hello%20Derrick%2C%20I%27m%20reaching%20out%20from%20your%20portfolio%20and%20would%20like%20to%20connect." target="_blank" rel="noopener noreferrer"><i class="fab fa-whatsapp" aria-hidden="true"></i> Personal WhatsApp</a>
-                    </div>
-                    <div class="social-icons">
-                        <a href="https://github.com/DerrickOgetonto" target="_blank" rel="noopener noreferrer" aria-label="GitHub profile"><i class="fab fa-github" aria-hidden="true"></i></a>
-                        <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn profile"><i class="fab fa-linkedin" aria-hidden="true"></i></a>
-                        <a href="https://x.com" target="_blank" rel="noopener noreferrer" aria-label="X (formerly Twitter) profile"><i class="fab fa-x-twitter" aria-hidden="true"></i></a>
-                        <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" aria-label="Instagram profile"><i class="fab fa-instagram" aria-hidden="true"></i></a>
-                    </div>
-                    <a href="./DERRICK_OGETONTO_CV.pdf" download class="btn btn2">Download CV (PDF)</a>
-                </div>
-                <div class="contact-right">
-                    <form name="submit-to-google-sheet" aria-label="Contact form">
-                        <label for="contact-name" class="sr-only">Your Name</label>
-                        <input type="text" id="contact-name" name="Name" placeholder="Your Name" required aria-required="true" autocomplete="name">
-                        <label for="contact-email" class="sr-only">Your Email</label>
-                        <input type="email" id="contact-email" name="Email" placeholder="Your Email" required aria-required="true" autocomplete="email">
-                        <label for="contact-message" class="sr-only">Project details</label>
-                        <textarea id="contact-message" name="Message" rows="6" placeholder="Project details, timeline, and requirements..." required aria-required="true"></textarea>
-                        <button type="submit" class="btn btn3">Submit Inquiry</button>
-                    </form>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- ============================================================
-         FLOATING WHATSAPP
-         ============================================================ -->
-    <div class="wa-floating" aria-label="Quick WhatsApp contact">
-        <div class="wa-floating-panel">
-            <a href="https://wa.me/254794994170?text=Hello%20Derrick%2C%20I%27d%20like%20to%20discuss%20a%20business%20project%20and%20request%20a%20quote." target="_blank" rel="noopener noreferrer" class="wa-option">
-                <i class="fas fa-briefcase" aria-hidden="true"></i>
-                <span>Business</span>
-            </a>
-            <a href="https://wa.me/254794994170?text=Hello%20Derrick%2C%20I%27m%20reaching%20out%20from%20your%20portfolio%20and%20would%20like%20to%20connect." target="_blank" rel="noopener noreferrer" class="wa-option">
-                <i class="fas fa-user" aria-hidden="true"></i>
-                <span>Personal</span>
-            </a>
-        </div>
-        <a href="https://wa.me/254794994170?text=Hello%20Derrick%2C%20I%27d%20like%20to%20chat%20about%20a%20project." target="_blank" rel="noopener noreferrer" class="wa-button" aria-label="Chat on WhatsApp">
-            <i class="fab fa-whatsapp" aria-hidden="true"></i>
-        </a>
+      <aside class="header-panel" aria-label="What Derrick delivers">
+        <div class="panel-badge">Currently available</div>
+        <h3>What I deliver</h3>
+        <ul>
+          <li>Responsive business websites</li>
+          <li>Database and workflow automation</li>
+          <li>Institutional IT support</li>
+          <li>Clean front-end interfaces</li>
+        </ul>
+      </aside>
     </div>
+  </header>
 
-    <!-- ============================================================
-         LIGHTBOX
-         ============================================================ -->
-    <div class="lightbox" id="lightbox" aria-hidden="true" role="dialog" aria-modal="true" aria-label="Portfolio preview">
-        <div class="lightbox-content">
-            <button type="button" class="lightbox-close" aria-label="Close preview">×</button>
-            <img id="lightbox-image" src="" alt="Portfolio preview">
-            <div class="lightbox-text">
-                <span class="lightbox-badge" id="lightbox-badge">Project</span>
-                <h3 id="lightbox-title">Project Title</h3>
-                <p id="lightbox-description">Project description.</p>
-            </div>
-        </div>
-    </div>
+  <!-- Other sections: highlights, about, services, portfolio, contact -->
+  <!-- (You would continue with your other content here) -->
 
-    <!-- ============================================================
-         COOKIE CONSENT BANNER (GDPR / CCPA)
-         ============================================================ -->
-    <div class="cookie-banner" id="cookieBanner" role="region" aria-label="Cookie consent" aria-hidden="true">
-        <div class="cookie-content">
-            <div class="cookie-text">
-                <p><strong>We value your privacy.</strong> This site uses cookies to improve your browsing experience and analyse traffic. You can accept all, reject non-essential, or customise your preferences. Read our <a href="#privacy" id="privacyLink">Privacy Policy</a> and <a href="#terms" id="termsLink">Terms of Service</a>.</p>
-            </div>
-            <div class="cookie-actions">
-                <button type="button" class="btn btn3 cookie-btn" id="cookieAccept">Accept All</button>
-                <button type="button" class="btn btn2 cookie-btn" id="cookieReject">Reject Non-Essential</button>
-                <button type="button" class="cookie-settings-link" id="cookieSettings">Customise</button>
-            </div>
-        </div>
-    </div>
+  <!-- JavaScript for Sidebar and Accessibility -->
+  <script>
+    (() => {
+      "use strict";
 
-    <!-- Cookie preferences modal -->
-    <div class="cookie-modal" id="cookieModal" aria-hidden="true" role="dialog" aria-modal="true" aria-label="Cookie preferences">
-        <div class="cookie-modal-content">
-            <button type="button" class="cookie-modal-close" aria-label="Close cookie preferences">×</button>
-            <h3>Cookie Preferences</h3>
-            <p>Manage how we use cookies. Essential cookies are always active as they are required for the site to function.</p>
-            <div class="cookie-option">
-                <div>
-                    <strong>Essential</strong>
-                    <p>Required for core functionality (security, form submission).</p>
-                </div>
-                <span class="cookie-status">Always Active</span>
-            </div>
-            <div class="cookie-option">
-                <div>
-                    <strong>Analytics</strong>
-                    <p>Help us understand how visitors interact with the site.</p>
-                </div>
-                <label class="cookie-toggle">
-                    <input type="checkbox" id="cookieAnalytics" checked>
-                    <span class="cookie-slider"></span>
-                </label>
-            </div>
-            <div class="cookie-option">
-                <div>
-                    <strong>Marketing</strong>
-                    <p>Used to deliver relevant content and measure campaign performance.</p>
-                </div>
-                <label class="cookie-toggle">
-                    <input type="checkbox" id="cookieMarketing">
-                    <span class="cookie-slider"></span>
-                </label>
-            </div>
-            <button type="button" class="btn btn3" id="cookieSavePrefs">Save Preferences</button>
-        </div>
-    </div>
+      const menuToggle = document.getElementById("menuToggle");
+      const sidemenu = document.getElementById("sidemenu");
+      const mobileOverlay = document.getElementById("mobileOverlay");
+      const focusableSelectors = [
+        'a[href]',
+        'button:not([disabled])',
+        'input',
+        'textarea',
+        'select',
+        '[tabindex]:not([tabindex="-1"])',
+      ];
+      let lastFocusedElement = null;
 
-    <!-- ============================================================
-         PRIVACY POLICY & TERMS OF SERVICE (MODAL)
-         ============================================================ -->
-    <div class="legal-modal" id="legalModal" aria-hidden="true" role="dialog" aria-modal="true" aria-label="Legal information">
-        <div class="legal-modal-content">
-            <button type="button" class="legal-modal-close" aria-label="Close legal information">×</button>
-            <div id="legalContent"></div>
-        </div>
-    </div>
+      // Open menu
+      function openMenu() {
+        lastFocusedElement = document.activeElement;
+        sidemenu.classList.add("active");
+        sidemenu.style.right = "0";
+        sidemenu.setAttribute("tabindex", "0");
+        mobileOverlay.classList.add("active");
+        mobileOverlay.setAttribute("aria-hidden", "false");
+        menuToggle.setAttribute("aria-expanded", "true");
+        document.body.style.overflow = "hidden";
 
-    <!-- ============================================================
-         JAVASCRIPT LOGIC
-         ============================================================ -->
-    <script>
-        (function() {
-            'use strict';
+        // Focus first focusable item in menu
+        const focusableElems = sidemenu.querySelectorAll(focusableSelectors.join(","));
+        if (focusableElems.length) focusableElems[0].focus();
 
-            /* ---------- Tab Switching ---------- */
-            var tablinks = document.getElementsByClassName("tab-links");
-            var tabcontents = document.getElementsByClassName("tab-contents");
+        // Trap focus inside sidemenu
+        document.addEventListener("focus", trapFocus, true);
+      }
 
-            window.opentab = function(tabname, event) {
-                for (var i = 0; i < tablinks.length; i++) {
-                    tablinks[i].classList.remove("active-link");
-                    tablinks[i].setAttribute("aria-selected", "false");
-                }
-                for (var i = 0; i < tabcontents.length; i++) {
-                    tabcontents[i].classList.remove("active-tab");
-                }
-                if (event && event.currentTarget) {
-                    event.currentTarget.classList.add("active-link");
-                    event.currentTarget.setAttribute("aria-selected", "true");
-                }
-                var targetTab = document.getElementById(tabname);
-                if (targetTab) {
-                    targetTab.classList.add("active-tab");
-                }
-            };
+      // Close menu
+      function closeMenu() {
+        sidemenu.classList.remove("active");
+        sidemenu.style.right = "-320px";
+        sidemenu.setAttribute("tabindex", "-1");
+        mobileOverlay.classList.remove("active");
+        mobileOverlay.setAttribute("aria-hidden", "true");
+        menuToggle.setAttribute("aria-expanded", "false");
+        document.body.style.overflow = "";
 
-            /* ---------- Mobile Menu ---------- */
-            var sidemenu = document.getElementById("sidemenu");
-            var mobileOverlay = document.getElementById("mobileOverlay");
-            var menuToggle = document.getElementById("menuToggle");
+        // Return focus
+        if (lastFocusedElement) lastFocusedElement.focus();
 
-            window.openmenu = function() {
-                if (sidemenu) {
-                    sidemenu.classList.add('active');
-                    sidemenu.style.right = '0';
-                }
-                if (mobileOverlay) {
-                    mobileOverlay.classList.add("active");
-                    mobileOverlay.setAttribute("aria-hidden", "false");
-                }
-                if (menuToggle) menuToggle.setAttribute("aria-expanded", "true");
-                document.body.style.overflow = 'hidden';
-            };
+        // Remove focus trap
+        document.removeEventListener("focus", trapFocus, true);
+      }
 
-            window.closemenu = function() {
-                if (sidemenu) {
-                    sidemenu.classList.remove('active');
-                    sidemenu.style.right = '-320px';
-                }
-                if (mobileOverlay) {
-                    mobileOverlay.classList.remove("active");
-                    mobileOverlay.setAttribute("aria-hidden", "true");
-                }
-                if (menuToggle) menuToggle.setAttribute("aria-expanded", "false");
-                document.body.style.overflow = '';
-            };
+      // Focus trap inside sidemenu
+      function trapFocus(event) {
+        if (!sidemenu.contains(event.target)) {
+          event.stopPropagation();
+          sidemenu.querySelector(focusableSelectors.join(",")).focus();
+        }
+      }
 
-            document.querySelectorAll('#sidemenu a[href^="#"]').forEach(function(link) {
-                link.addEventListener('click', function() {
-                    setTimeout(function() { window.closemenu(); }, 10);
-                });
-            });
+      menuToggle.addEventListener("click", () => {
+        if (sidemenu.classList.contains("active")) {
+          closeMenu();
+        } else {
+          openMenu();
+        }
+      });
 
-            if (mobileOverlay) {
-                mobileOverlay.addEventListener('click', function() { window.closemenu(); });
-            }
+      mobileOverlay.addEventListener("click", closeMenu);
 
-            /* ---------- Lightbox ---------- */
-            var lightbox = document.getElementById('lightbox');
-            var lightboxImage = document.getElementById('lightbox-image');
-            var lightboxBadge = document.getElementById('lightbox-badge');
-            var lightboxTitle = document.getElementById('lightbox-title');
-            var lightboxDescription = document.getElementById('lightbox-description');
+      // Close menu on Escape key
+      document.addEventListener("keydown", (e) => {
+        if (e.key === "Escape") {
+          if (sidemenu.classList.contains("active")) {
+            closeMenu();
+          }
+        }
+      });
 
-            document.querySelectorAll('.portfolio-trigger').forEach(function(button) {
-                button.addEventListener('click', function() {
-                    var image = button.dataset.image;
-                    var badge = button.dataset.badge;
-                    var title = button.dataset.title;
-                    var description = button.dataset.description;
+      // Close menu when clicking internal links in sidemenu
+      sidemenu.querySelectorAll("a").forEach((link) => {
+        link.addEventListener("click", () => {
+          closeMenu();
+        });
+      });
 
-                    if (!lightbox || !lightboxImage) return;
-
-                    lightboxImage.src = image;
-                    lightboxImage.alt = title + ' preview';
-                    lightboxBadge.textContent = badge;
-                    lightboxTitle.textContent = title;
-                    lightboxDescription.textContent = description;
-                    lightbox.classList.add('active');
-                    lightbox.setAttribute('aria-hidden', 'false');
-                    document.body.classList.add('lightbox-open');
-
-                    setTimeout(function() {
-                        var closeBtn = lightbox.querySelector('.lightbox-close');
-                        if (closeBtn) closeBtn.focus();
-                    }, 100);
-                });
-            });
-
-            function closeLightbox() {
-                if (lightbox) {
-                    lightbox.classList.remove('active');
-                    lightbox.setAttribute('aria-hidden', 'true');
-                }
-                document.body.classList.remove('lightbox-open');
-            }
-
-            var closeBtn = document.querySelector('.lightbox-close');
-            if (closeBtn) closeBtn.addEventListener('click', closeLightbox);
-
-            if (lightbox) {
-                lightbox.addEventListener('click', function(event) {
-                    if (event.target === lightbox) closeLightbox();
-                });
-            }
-
-            /* ---------- Escape Key Handling ---------- */
-            document.addEventListener('keydown', function(e) {
-                if (e.key === 'Escape') {
-                    window.closemenu();
-                    closeLightbox();
-                    closeLegalModal();
-                    closeCookieModal();
-                }
-            });
-
-            /* ---------- Scroll Reveal ---------- */
-            var revealElements = document.querySelectorAll('.reveal, .highlight-card, .services-list > div, .work, .contact-left, .contact-right');
-
-            if ('IntersectionObserver' in window) {
-                var revealObserver = new IntersectionObserver(function(entries) {
-                    entries.forEach(function(entry) {
-                        if (entry.isIntersecting) {
-                            entry.target.classList.add('visible');
-                            revealObserver.unobserve(entry.target);
-                        }
-                    });
-                }, {
-                    threshold: 0.15,
-                    rootMargin: '0px 0px -30px 0px'
-                });
-                revealElements.forEach(function(element) { revealObserver.observe(element); });
-            } else {
-                revealElements.forEach(function(el) { el.classList.add('visible'); });
-            }
-
-            /* ---------- Google Sheet Form ---------- */
-            var scriptURL = 'YOUR_GOOGLE_APPS_SCRIPT_WEB_APP_URL';
-            var form = document.forms['submit-to-google-sheet'];
-
-            if (form) {
-                form.addEventListener('submit', function(e) {
-                    e.preventDefault();
-
-                    if (!scriptURL || scriptURL.includes('YOUR_GOOGLE')) {
-                        alert('The form is ready. Add your Google Apps Script URL to enable live submissions.');
-                        return;
-                    }
-
-                    var submitButton = form.querySelector('button[type="submit"]');
-                    submitButton.disabled = true;
-                    submitButton.innerHTML = "Sending...";
-
-                    fetch(scriptURL, { method: 'POST', body: new FormData(form) })
-                        .then(function(response) {
-                            alert('Success! Your message has been sent. Derrick will get back to you shortly.');
-                            form.reset();
-                            submitButton.disabled = false;
-                            submitButton.innerHTML = "Submit Inquiry";
-                        })
-                        .catch(function(error) {
-                            console.error('Error!', error.message);
-                            alert('Something went wrong. Please double-check your internet or try again.');
-                            submitButton.disabled = false;
-                            submitButton.innerHTML = "Submit Inquiry";
-                        });
-                });
-            }
-
-            /* ---------- Cookie Consent (GDPR / CCPA) ---------- */
-            var cookieBanner = document.getElementById('cookieBanner');
-            var cookieModal = document.getElementById('cookieModal');
-            var cookieAccept = document.getElementById('cookieAccept');
-            var cookieReject = document.getElementById('cookieReject');
-            var cookieSettings = document.getElementById('cookieSettings');
-            var cookieSavePrefs = document.getElementById('cookieSavePrefs');
-            var cookieAnalytics = document.getElementById('cookieAnalytics');
-            var cookieMarketing = document.getElementById('cookieMarketing');
-            var cookieModalClose = document.querySelector('.cookie-modal-close');
-
-            function getCookieConsent() {
-                try {
-                    return JSON.parse(localStorage.getItem('cookieConsent'));
-                } catch (e) {
-                    return null;
-                }
-            }
-
-            function saveCookieConsent(consent) {
-                localStorage.setItem('cookieConsent', JSON.stringify(consent));
-                cookieBanner.classList.remove('show');
-                cookieBanner.setAttribute('aria-hidden', 'true');
-                console.log('Cookie consent saved:', consent);
-            }
-
-            function showCookieBanner() {
-                if (!getCookieConsent()) {
-                    cookieBanner.classList.add('show');
-                    cookieBanner.setAttribute('aria-hidden', 'false');
-                }
-            }
-
-            function closeCookieModal() {
-                cookieModal.classList.remove('show');
-                cookieModal.setAttribute('aria-hidden', 'true');
-            }
-
-            if (cookieAccept) {
-                cookieAccept.addEventListener('click', function() {
-                    saveCookieConsent({ essential: true, analytics: true, marketing: true });
-                });
-            }
-
-            if (cookieReject) {
-                cookieReject.addEventListener('click', function() {
-                    saveCookieConsent({ essential: true, analytics: false, marketing: false });
-                });
-            }
-
-            if (cookieSettings) {
-                cookieSettings.addEventListener('click', function() {
-                    var consent = getCookieConsent();
-                    if (consent) {
-                        cookieAnalytics.checked = consent.analytics;
-                        cookieMarketing.checked = consent.marketing;
-                    }
-                    cookieModal.classList.add('show');
-                    cookieModal.setAttribute('aria-hidden', 'false');
-                });
-            }
-
-            if (cookieSavePrefs) {
-                cookieSavePrefs.addEventListener('click', function() {
-                    saveCookieConsent({
-                        essential: true,
-                        analytics: cookieAnalytics.checked,
-                        marketing: cookieMarketing.checked
-                    });
-                    closeCookieModal();
-                });
-            }
-
-            if (cookieModalClose) {
-                cookieModalClose.addEventListener('click', closeCookieModal);
-            }
-
-            if (cookieModal) {
-                cookieModal.addEventListener('click', function(e) {
-                    if (e.target === cookieModal) closeCookieModal();
-                });
-            }
-
-            showCookieBanner();
-
-            /* ---------- Legal Modal (Privacy / Terms) ---------- */
-            var legalModal = document.getElementById('legalModal');
-            var legalContent = document.getElementById('legalContent');
-            var legalModalClose = document.querySelector('.legal-modal-close');
-            var privacyLink = document.getElementById('privacyLink');
-            var termsLink = document.getElementById('termsLink');
-
-            var privacyPolicyHTML = `
-                <h2>Privacy Policy</h2>
-                <p><strong>Last updated:</strong> January 2025</p>
-                <p>Derrick OG ("we", "our", "us") operates this portfolio website. This page informs you of our policies regarding the collection, use, and disclosure of personal data when you use our site.</p>
-                <h3>Information We Collect</h3>
-                <p>We collect information you voluntarily provide via our contact form (name, email, message). We also collect non-personal data through cookies for analytics purposes.</p>
-                <h3>How We Use Your Information</h3>
-                <p>We use your information to respond to inquiries, improve our website, and analyse traffic. We do not sell your personal data to third parties.</p>
-                <h3>Cookies</h3>
-                <p>We use essential cookies for site functionality and optional analytics/marketing cookies. You can manage your preferences via the cookie banner.</p>
-                <h3>Your Rights (GDPR / CCPA)</h3>
-                <p>You have the right to access, correct, or delete your personal data. To exercise these rights, contact us at derrickogetonto161@gmail.com.</p>
-                <h3>Data Retention</h3>
-                <p>We retain contact form submissions for as long as necessary to fulfil your request, then delete them securely.</p>
-                <h3>Contact</h3>
-                <p>For privacy-related inquiries: <a href="mailto:derrickogetonto161@gmail.com">derrickogetonto161@gmail.com</a></p>
-            `;
-
-            var termsOfServiceHTML = `
-                <h2>Terms of Service</h2>
-                <p><strong>Last updated:</strong> January 2025</p>
-                <p>By using this website, you agree to the following terms and conditions.</p>
-                <h3>Use of Site</h3>
-                <p>This site is for informational and portfolio purposes. You agree not to misuse the site or its content.</p>
-                <h3>Intellectual Property</h3>
-                <p>All content, design, and code on this site are the property of Derrick OG unless otherwise stated. You may not reproduce or redistribute without permission.</p>
-                <h3>External Links</h3>
-                <p>Our site may contain links to third-party websites. We are not responsible for their content or privacy practices.</p>
-                <h3>Limitation of Liability</h3>
-                <p>We provide this site "as is" without warranties. We are not liable for any damages arising from your use of the site.</p>
-                <h3>Changes to Terms</h3>
-                <p>We may update these terms at any time. Continued use of the site constitutes acceptance of the updated terms.</p>
-                <h3>Contact</h3>
-                <p>For questions about these terms: <a href="mailto:derrickogetonto161@gmail.com">derrickogetonto161@gmail.com</a></p>
-            `;
-
-            function openLegalModal(content) {
-                legalContent.innerHTML = content;
-                legalModal.classList.add('show');
-                legalModal.setAttribute('aria-hidden', 'false');
-                document.body.style.overflow = 'hidden';
-            }
-
-            function closeLegalModal() {
-                legalModal.classList.remove('show');
-                legalModal.setAttribute('aria-hidden', 'true');
-                document.body.style.overflow = '';
-            }
-
-            if (privacyLink) {
-                privacyLink.addEventListener('click', function(e) {
-                    e.preventDefault();
-                    openLegalModal(privacyPolicyHTML);
-                });
-            }
-
-            if (termsLink) {
-                termsLink.addEventListener('click', function(e) {
-                    e.preventDefault();
-                    openLegalModal(termsOfServiceHTML);
-                });
-            }
-
-            if (legalModalClose) {
-                legalModalClose.addEventListener('click', closeLegalModal);
-            }
-
-            if (legalModal) {
-                legalModal.addEventListener('click', function(e) {
-                    if (e.target === legalModal) closeLegalModal();
-                });
-            }
-
-        })();
-    </script>
+      // Close button in sidemenu
+      const closeBtn = sidemenu.querySelector(".menu-close");
+      if (closeBtn) {
+        closeBtn.addEventListener("click", closeMenu);
+      }
+    })();
+  </script>
 
 </body>
 </html>
