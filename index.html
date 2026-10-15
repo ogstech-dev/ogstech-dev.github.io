@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <!-- ============================================================
-         SEO METADATA — Accurate, no fabricated claims
+         SEO METADATA
          ============================================================ -->
     <title>Derrick Ogetonto Mandela | Business IT Student &amp; Web Developer</title>
     <meta name="description" content="Derrick Ogetonto Mandela is a Business Information Technology student and web developer creating responsive websites for business concepts. Currently learning digital marketing, content strategy, and SEO.">
@@ -38,7 +38,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
     <!-- Main Stylesheet -->
-    <link rel="stylesheet" href="style.css?v=6">
+    <link rel="stylesheet" href="style.css?v=7">
 </head>
 <body>
 
@@ -46,25 +46,25 @@
     <a href="#about" class="skip-link">Skip to main content</a>
 
     <!-- ============================================================
-         HEADER SECTION — Hero with project-focused positioning
+         HEADER SECTION
          ============================================================ -->
     <header id="header">
         <div class="container">
             <nav aria-label="Main navigation">
-                <a href="#header" class="brand" aria-label="Derrick Ogetonto Mandela — home">
+                <a href="#header" class="brand">
                     <span class="brand-mark" aria-hidden="true">D</span>
                     <span class="brand-text">Derrick<span>OG</span></span>
                 </a>
 
                 <div class="mobile-overlay" id="mobileOverlay" onclick="closemenu()" aria-hidden="true"></div>
 
-                <ul id="sidemenu" role="menubar">
-                    <li role="none"><a role="menuitem" href="#header">Home</a></li>
-                    <li role="none"><a role="menuitem" href="#about">About</a></li>
-                    <li role="none"><a role="menuitem" href="#services">Skills</a></li>
-                    <li role="none"><a role="menuitem" href="#portfolio">Projects</a></li>
-                    <li role="none"><a role="menuitem" href="#contact">Contact</a></li>
-                    <li role="none" class="menu-close-item">
+                <ul id="sidemenu">
+                    <li><a href="#header">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#services">Skills</a></li>
+                    <li><a href="#portfolio">Projects</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <li class="menu-close-item">
                         <button class="menu-close" onclick="closemenu()" aria-label="Close menu">
                             <i class="fas fa-times" aria-hidden="true"></i>
                         </button>
@@ -106,9 +106,9 @@
                     </div>
                 </div>
 
-                <aside class="header-panel" aria-label="What I work with">
+                <aside class="header-panel" aria-labelledby="header-panel-heading">
                     <div class="panel-badge">Open to opportunities</div>
-                    <h3>What I work with</h3>
+                    <h2 id="header-panel-heading" class="panel-heading">What I work with</h2>
                     <ul>
                         <li>Responsive websites (HTML, CSS, JS)</li>
                         <li>Business &amp; brand website concepts</li>
@@ -121,345 +121,352 @@
     </header>
 
     <!-- ============================================================
-         FOCUS BANNER — Honest positioning
+         MAIN CONTENT
          ============================================================ -->
-    <section class="hire-banner reveal" aria-labelledby="focus-heading">
-        <div class="container">
-            <div class="hire-banner-inner">
-                <div class="hire-copy">
-                    <p class="eyebrow">What I'm Looking For</p>
-                    <h2 id="focus-heading">Part-time <span>Digital Marketing &amp; Web Support</span> Roles</h2>
-                    <p>I'm a Business IT student and web developer looking to apply my technical foundation — building and structuring websites, presenting content clearly, and thinking about user experience — in a part-time digital marketing role where I can keep learning content strategy, SEO, and online brand presence.</p>
-                    <div class="hire-actions">
-                        <a href="#contact" class="btn">
+    <main>
+
+        <!-- ============================================================
+             FOCUS BANNER
+             ============================================================ -->
+        <section class="hire-banner reveal" aria-labelledby="focus-heading">
+            <div class="container">
+                <div class="hire-banner-inner">
+                    <div class="hire-copy">
+                        <p class="eyebrow">What I'm Looking For</p>
+                        <h2 id="focus-heading">Part-time <span>Digital Marketing &amp; Web Support</span> Roles</h2>
+                        <p>I'm a Business IT student and web developer looking to apply my technical foundation — building and structuring websites, presenting content clearly, and thinking about user experience — in a part-time digital marketing role where I can keep learning content strategy, SEO, and online brand presence.</p>
+                        <div class="hire-actions">
+                            <a href="#contact" class="btn">
+                                <i class="fas fa-paper-plane" aria-hidden="true"></i>
+                                Get in Touch
+                            </a>
+                            <a href="./DERRICK_OGETONTO_CV.pdf" download class="btn btn2">
+                                <i class="fas fa-download" aria-hidden="true"></i>
+                                Download CV
+                            </a>
+                        </div>
+                        <ul class="hire-perks">
+                            <li><i class="fas fa-check" aria-hidden="true"></i> Available for part-time roles</li>
+                            <li><i class="fas fa-check" aria-hidden="true"></i> Open to internships &amp; learning opportunities</li>
+                            <li><i class="fas fa-check" aria-hidden="true"></i> Based in Kitengela / Nairobi area</li>
+                        </ul>
+                    </div>
+                    <div class="hire-badge-wrap" aria-hidden="true">
+                        <div class="hire-badge">
+                            <i class="fas fa-seedling"></i>
+                            <span>Currently<br><strong>Learning</strong></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============================================================
+             HIGHLIGHTS
+             ============================================================ -->
+        <section class="highlights" aria-labelledby="expertise-heading">
+            <div class="container">
+                <div class="section-heading-wrap">
+                    <p class="eyebrow section-eyebrow">Core Strengths</p>
+                    <h2 class="section-title" id="expertise-heading">What I Bring</h2>
+                </div>
+                <div class="highlight-grid">
+                    <article class="highlight-card">
+                        <i class="fas fa-code" aria-hidden="true"></i>
+                        <h3>Website Development</h3>
+                        <p>Hands-on practice building responsive websites for different business concepts using HTML, CSS, and JavaScript.</p>
+                    </article>
+                    <article class="highlight-card">
+                        <i class="fas fa-paint-brush" aria-hidden="true"></i>
+                        <h3>Design &amp; UX</h3>
+                        <p>User-focused interface design with clean layouts, clear hierarchy, and mobile-friendly experiences.</p>
+                    </article>
+                    <article class="highlight-card">
+                        <i class="fas fa-chart-line" aria-hidden="true"></i>
+                        <h3>Business &amp; Marketing Interest</h3>
+                        <p>Combining technical skills with an interest in how websites support online visibility, brand presentation, and customer contact.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============================================================
+             ABOUT SECTION
+             ============================================================ -->
+        <section id="about" class="reveal" aria-labelledby="about-heading">
+            <div class="container">
+                <div class="row">
+                    <div class="about-col-1">
+                        <img src="projo/projo3.jpeg" alt="Derrick Ogetonto Mandela, Business IT student and web developer" loading="lazy" width="600" height="800">
+                    </div>
+                    <div class="about-col-2">
+                        <div class="section-header">
+                            <h2 class="sub-title" id="about-heading">About Me</h2>
+                        </div>
+                        <p>I am a Business Information Technology student and web developer with hands-on practice creating websites for different business concepts. I enjoy combining technology, design, and business understanding to build useful online experiences. I am interested in applying my web development and user-experience skills to support businesses with their online presence while developing my knowledge of digital marketing, content strategy, and search engine optimization.</p>
+
+                        <div class="tab-titles" role="tablist" aria-label="About me sections">
+                            <button class="tab-links active-link" onclick="opentab('skills', event)" role="tab" aria-selected="true" aria-controls="skills" id="tab-skills">
+                                <span class="tab-icon"><i class="fas fa-code" aria-hidden="true"></i></span>
+                                Skills
+                            </button>
+                            <button class="tab-links" onclick="opentab('experience', event)" role="tab" aria-selected="false" aria-controls="experience" id="tab-experience">
+                                <span class="tab-icon"><i class="fas fa-briefcase" aria-hidden="true"></i></span>
+                                Experience
+                            </button>
+                            <button class="tab-links" onclick="opentab('education', event)" role="tab" aria-selected="false" aria-controls="education" id="tab-education">
+                                <span class="tab-icon"><i class="fas fa-graduation-cap" aria-hidden="true"></i></span>
+                                Education
+                            </button>
+                        </div>
+
+                        <!-- Tab: Skills -->
+                        <div class="tab-contents active-tab" id="skills" role="tabpanel" aria-labelledby="tab-skills">
+                            <div class="skill-group">
+                                <h3>Web Development</h3>
+                                <p>HTML5, CSS3 (Flexbox, Grid), JavaScript (ES6+), responsive design, semantic markup</p>
+                            </div>
+                            <div class="skill-group">
+                                <h3>Programming &amp; Systems</h3>
+                                <p>Java, C++, C (coursework), basic database concepts, IT fundamentals</p>
+                            </div>
+                            <div class="skill-group">
+                                <h3>Web Structure &amp; Presentation</h3>
+                                <p>Page structure, content hierarchy, basic SEO concepts (titles, meta descriptions, alt text, headings), user experience principles</p>
+                            </div>
+                            <div class="skill-group">
+                                <h3>Currently Learning</h3>
+                                <p>Digital marketing fundamentals, content strategy, SEO best practices, online brand presentation</p>
+                            </div>
+                        </div>
+
+                        <!-- Tab: Experience -->
+                        <div class="tab-contents" id="experience" role="tabpanel" aria-labelledby="tab-experience">
+                            <div class="experience-item">
+                                <div class="exp-header">
+                                    <h3>ICT Intern / Industrial Attachment Student</h3>
+                                    <span class="exp-date">Aug 2025 – Nov 2025</span>
+                                </div>
+                                <p class="exp-company">Ministry of Education, State Department for Higher Education — Nairobi, Kenya</p>
+                                <ul class="exp-details">
+                                    <li>Assisted with network setup, administration, monitoring, and LAN-related troubleshooting</li>
+                                    <li>Supported software and hardware installation for staff</li>
+                                    <li>Provided general ICT support and helped users with office applications</li>
+                                    <li>Assisted with ICT equipment configuration and verification</li>
+                                    <li>Helped maintain the ICT equipment inventory</li>
+                                    <li>Supported power-system and backup maintenance activities</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <!-- Tab: Education -->
+                        <div class="tab-contents" id="education" role="tabpanel" aria-labelledby="tab-education">
+                            <div class="education-item">
+                                <div class="edu-header">
+                                    <h3>BSc. Business Information Technology</h3>
+                                    <span class="edu-date">Expected 2027</span>
+                                </div>
+                                <p class="edu-institution">The Cooperative University of Kenya</p>
+                                <p class="edu-focus">Ongoing — 3rd year</p>
+                            </div>
+                            <div class="education-item">
+                                <div class="edu-header">
+                                    <h3>Diploma in Information Technology</h3>
+                                    <span class="edu-date">Completed 2025 · Credit</span>
+                                </div>
+                                <p class="edu-institution">The Cooperative University of Kenya</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============================================================
+             SKILLS / SERVICES SECTION
+             ============================================================ -->
+        <section id="services" class="reveal" aria-labelledby="services-heading">
+            <div class="container">
+                <h2 class="sub-title" id="services-heading">What I Can Help With</h2>
+                <div class="services-list">
+                    <div>
+                        <i class="fas fa-code" aria-hidden="true"></i>
+                        <h3>Website Development</h3>
+                        <p>Building clean, responsive websites for business concepts using HTML, CSS, and JavaScript — focused on readability, structure, and mobile-friendly layouts.</p>
+                        <a href="#contact">Get in touch</a>
+                    </div>
+                    <div>
+                        <i class="fas fa-mobile-alt" aria-hidden="true"></i>
+                        <h3>Responsive Web Design</h3>
+                        <p>Making sure websites look and work well across desktop, tablet, and mobile devices using modern layout techniques.</p>
+                        <a href="#contact">Get in touch</a>
+                    </div>
+                    <div>
+                        <i class="fas fa-search" aria-hidden="true"></i>
+                        <h3>Web Structure &amp; Basic SEO</h3>
+                        <p>Applying basic SEO concepts like meaningful page titles, meta descriptions, heading hierarchy, and image alt text to improve structure and discoverability.</p>
+                        <a href="#contact">Get in touch</a>
+                    </div>
+                    <div>
+                        <i class="fas fa-lightbulb" aria-hidden="true"></i>
+                        <h3>Digital Marketing (Learning)</h3>
+                        <p>Currently developing knowledge in content strategy, online brand presentation, and SEO as I work toward part-time digital marketing opportunities.</p>
+                        <a href="#contact">Get in touch</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============================================================
+             PORTFOLIO SECTION
+             ============================================================ -->
+        <section id="portfolio" class="reveal" aria-labelledby="portfolio-heading">
+            <div class="container">
+                <h2 class="sub-title" id="portfolio-heading">My Projects</h2>
+                <p class="portfolio-intro">These are personal web development projects and business website concepts I built to practise responsive design, UI, and business-focused presentation.</p>
+
+                <div class="work-list">
+                    <!-- Project 1: Titan Timber & Hardware -->
+                    <div class="work">
+                        <img src="projo/projo9.png" alt="Titan Timber & Hardware website concept preview" loading="lazy" width="600" height="400">
+                        <div class="layer">
+                            <span class="badge badge-orange">Business Website Concept</span>
+                            <h3>Titan Timber &amp; Hardware</h3>
+                            <p>A hardware and timber supplier website concept for Kitengela, designed to help visitors browse products, estimate costs, and contact the business directly.</p>
+                            <div class="tech-tags">
+                                <span>HTML</span> <span>CSS</span> <span>JavaScript</span> <span>WhatsApp Integration</span>
+                            </div>
+                            <div class="layer-actions">
+                                <a href="https://keen-rugelach-4c6637.netlify.app" target="_blank" rel="noopener noreferrer" aria-label="Open Titan Timber &amp; Hardware project in a new tab"><i class="fas fa-external-link-alt" aria-hidden="true"></i></a>
+                                <button type="button" class="portfolio-trigger" data-image="projo/projo9.png" data-title="Titan Timber &amp; Hardware" data-badge="Business Website Concept" data-description="A hardware and timber supplier website concept featuring a filterable product catalog (structural timber, marine plywood, cement, roofing nails, custom benches, door frames), fabrication services, an instant cost estimator with delivery zones, and a WhatsApp ordering flow to help visitors explore products and contact the business." aria-label="Preview Titan Timber &amp; Hardware"><i class="fas fa-search" aria-hidden="true"></i></button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project 2: Galaxy Resort Kitengela -->
+                    <div class="work">
+                        <img src="projo/projo6.jpg" alt="Galaxy Resort Kitengela website concept preview" loading="lazy" width="600" height="400">
+                        <div class="layer">
+                            <span class="badge badge-blue">Hospitality Website Concept</span>
+                            <h3>Galaxy Resort Kitengela</h3>
+                            <p>A hospitality website concept presenting resort services, rooms, dining, events, and amenities with a clear, mobile-friendly layout.</p>
+                            <div class="tech-tags">
+                                <span>HTML</span> <span>CSS</span> <span>Responsive Layout</span>
+                            </div>
+                            <div class="layer-actions">
+                                <a href="https://chic-scone-d96e36.netlify.app" target="_blank" rel="noopener noreferrer" aria-label="Open Galaxy Resort project in a new tab"><i class="fas fa-external-link-alt" aria-hidden="true"></i></a>
+                                <button type="button" class="portfolio-trigger" data-image="projo/projo6.jpg" data-title="Galaxy Resort Kitengela" data-badge="Hospitality Website Concept" data-description="A hospitality website concept presenting resort services and business information — rooms, dining, events, spa, and location — with clear navigation and mobile-friendly access to information." aria-label="Preview Galaxy Resort Kitengela"><i class="fas fa-search" aria-hidden="true"></i></button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project 3: Kangale Jumbe & Co. Advocates -->
+                    <div class="work">
+                        <img src="projo/projo8.png" alt="Kangale Jumbe & Co. Advocates website concept preview" loading="lazy" width="600" height="400">
+                        <div class="layer">
+                            <span class="badge badge-green">Legal Services Website Concept</span>
+                            <h3>Kangale Jumbe &amp; Co. Advocates</h3>
+                            <p>A legal-services website concept presenting practice areas and consultation contact options with a professional, organised layout.</p>
+                            <div class="tech-tags">
+                                <span>HTML</span> <span>CSS</span> <span>WhatsApp Contact</span>
+                            </div>
+                            <div class="layer-actions">
+                                <a href="https://ogstech-dev.github.io/kangale-jumbe-and-Co-advocates/" target="_blank" rel="noopener noreferrer" aria-label="Open Kangale Jumbe &amp; Co. Advocates project in a new tab"><i class="fas fa-external-link-alt" aria-hidden="true"></i></a>
+                                <button type="button" class="portfolio-trigger" data-image="projo/projo8.png" data-title="Kangale Jumbe &amp; Co. Advocates" data-badge="Legal Services Website Concept" data-description="A legal-services website concept for a Kitengela-based law firm — presenting four core practice areas (conveyancing &amp; property, civil litigation, commercial law, family law), office location, and consultation contact options with a clear, professional layout." aria-label="Preview Kangale Jumbe &amp; Co. Advocates"><i class="fas fa-search" aria-hidden="true"></i></button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project 4: Kiki's Kitchen -->
+                    <div class="work">
+                        <img src="projo/projo5.jpg" alt="Kiki's Kitchen restaurant website concept preview" loading="lazy" width="600" height="400">
+                        <div class="layer">
+                            <span class="badge badge-orange">Food Brand Website Concept</span>
+                            <h3>Kiki's Kitchen</h3>
+                            <p>A restaurant and food-brand website concept focused on menu presentation, brand identity, and convenient mobile browsing.</p>
+                            <div class="tech-tags">
+                                <span>HTML</span> <span>CSS</span> <span>Responsive Layout</span>
+                            </div>
+                            <div class="layer-actions">
+                                <a href="https://kikiskitchen.netlify.app/" target="_blank" rel="noopener noreferrer" aria-label="Open Kiki's Kitchen project in a new tab"><i class="fas fa-external-link-alt" aria-hidden="true"></i></a>
+                                <button type="button" class="portfolio-trigger" data-image="projo/projo5.jpg" data-title="Kiki's Kitchen" data-badge="Food Brand Website Concept" data-description="A restaurant and food-brand website concept focused on menu presentation, brand identity, and convenient browsing — designed with an appetising visual tone and mobile-first layout." aria-label="Preview Kiki's Kitchen"><i class="fas fa-search" aria-hidden="true"></i></button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project 5: Ivy Interactive Portfolio -->
+                    <div class="work">
+                        <img src="projo/projo1.png" alt="Ivy Interactive Portfolio project preview" loading="lazy" width="600" height="400">
+                        <div class="layer">
+                            <span class="badge badge-blue">Portfolio Project</span>
+                            <h3>Ivy Interactive Portfolio</h3>
+                            <p>A portfolio website project focused on layout, visual presentation, and user-interface design.</p>
+                            <div class="tech-tags">
+                                <span>HTML</span> <span>CSS</span> <span>UI Design</span>
+                            </div>
+                            <div class="layer-actions">
+                                <a href="https://ivy-portfolio.netlify.app/" target="_blank" rel="noopener noreferrer" aria-label="Open Ivy Interactive Portfolio in a new tab"><i class="fas fa-external-link-alt" aria-hidden="true"></i></a>
+                                <button type="button" class="portfolio-trigger" data-image="projo/projo1.png" data-title="Ivy Interactive Portfolio" data-badge="Portfolio Project" data-description="A portfolio website project focused on layout, typography, visual presentation, and user-interface design." aria-label="Preview Ivy Interactive Portfolio"><i class="fas fa-search" aria-hidden="true"></i></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Contact CTA -->
+                <div class="portfolio-hire-cta reveal">
+                    <h3>Interested in working together?</h3>
+                    <p>I'm open to part-time digital marketing and web support opportunities.</p>
+                    <div class="portfolio-cta-actions">
+                        <a href="https://github.com/ogstech-dev" class="btn btn2" target="_blank" rel="noopener noreferrer">
+                            <i class="fab fa-github" aria-hidden="true"></i>
+                            See more on GitHub
+                        </a>
+                        <a href="#contact" class="btn btn-hire">
                             <i class="fas fa-paper-plane" aria-hidden="true"></i>
-                            Get in Touch
-                        </a>
-                        <a href="./DERRICK_OGETONTO_CV.pdf" download class="btn btn2">
-                            <i class="fas fa-download" aria-hidden="true"></i>
-                            Download CV
+                            Contact Me
                         </a>
                     </div>
-                    <ul class="hire-perks">
-                        <li><i class="fas fa-check" aria-hidden="true"></i> Available for part-time roles</li>
-                        <li><i class="fas fa-check" aria-hidden="true"></i> Open to internships &amp; learning opportunities</li>
-                        <li><i class="fas fa-check" aria-hidden="true"></i> Based in Kitengela / Nairobi area</li>
-                    </ul>
                 </div>
-                <div class="hire-badge-wrap" aria-hidden="true">
-                    <div class="hire-badge">
-                        <i class="fas fa-seedling"></i>
-                        <span>Currently<br><strong>Learning</strong></span>
+            </div>
+        </section>
+
+        <!-- ============================================================
+             CONTACT SECTION
+             ============================================================ -->
+        <section id="contact" class="reveal" aria-labelledby="contact-heading">
+            <div class="container">
+                <div class="row">
+                    <div class="contact-left">
+                        <h2 class="sub-title" id="contact-heading">Contact Me</h2>
+                        <p><i class="fas fa-user" aria-hidden="true"></i> Derrick Ogetonto Mandela</p>
+                        <p><i class="fas fa-paper-plane" aria-hidden="true"></i> <a href="mailto:derrickogetonto161@gmail.com" class="contact-link">derrickogetonto161@gmail.com</a></p>
+                        <p><i class="fas fa-phone" aria-hidden="true"></i> <a href="tel:+254794994170" class="contact-link">+254 794 994 170</a></p>
+                        <div class="wa-contact-links">
+                            <a href="https://wa.me/254794994170?text=Hello%20Derrick%2C%20I%27d%20like%20to%20discuss%20a%20part-time%20digital%20marketing%20or%20web%20role." target="_blank" rel="noopener noreferrer"><i class="fab fa-whatsapp" aria-hidden="true"></i> WhatsApp — Part-time roles</a>
+                            <a href="https://wa.me/254794994170?text=Hello%20Derrick%2C%20I%27d%20like%20to%20discuss%20a%20web%20development%20project." target="_blank" rel="noopener noreferrer"><i class="fab fa-whatsapp" aria-hidden="true"></i> WhatsApp — Web projects</a>
+                        </div>
+                        <div class="social-icons">
+                            <a href="https://github.com/ogstech-dev" target="_blank" rel="noopener noreferrer" aria-label="GitHub profile"><i class="fab fa-github" aria-hidden="true"></i></a>
+                            <a href="https://ogstech-dev.github.io/" target="_blank" rel="noopener noreferrer" aria-label="Portfolio website"><i class="fas fa-globe" aria-hidden="true"></i></a>
+                        </div>
+                        <a href="./DERRICK_OGETONTO_CV.pdf" download class="btn btn2">Download CV (PDF)</a>
+                    </div>
+                    <div class="contact-right">
+                        <form name="submit-to-google-sheet" aria-label="Contact form">
+                            <label for="contact-name" class="sr-only">Your Name</label>
+                            <input type="text" id="contact-name" name="Name" placeholder="Your Name" required aria-required="true" autocomplete="name">
+                            <label for="contact-email" class="sr-only">Your Email</label>
+                            <input type="email" id="contact-email" name="Email" placeholder="Your Email" required aria-required="true" autocomplete="email">
+                            <label for="contact-message" class="sr-only">Message</label>
+                            <textarea id="contact-message" name="Message" rows="6" placeholder="Tell me about the opportunity or project..." required aria-required="true"></textarea>
+                            <button type="submit" class="btn btn3">Send Message</button>
+                        </form>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- ============================================================
-         HIGHLIGHTS — Honest strengths
-         ============================================================ -->
-    <section class="highlights" aria-labelledby="expertise-heading">
-        <div class="container">
-            <div class="section-heading-wrap">
-                <p class="eyebrow section-eyebrow">Core Strengths</p>
-                <h2 class="section-title" id="expertise-heading">What I Bring</h2>
-            </div>
-            <div class="highlight-grid">
-                <article class="highlight-card">
-                    <i class="fas fa-code" aria-hidden="true"></i>
-                    <h3>Website Development</h3>
-                    <p>Hands-on practice building responsive websites for different business concepts using HTML, CSS, and JavaScript.</p>
-                </article>
-                <article class="highlight-card">
-                    <i class="fas fa-paint-brush" aria-hidden="true"></i>
-                    <h3>Design &amp; UX</h3>
-                    <p>User-focused interface design with clean layouts, clear hierarchy, and mobile-friendly experiences.</p>
-                </article>
-                <article class="highlight-card">
-                    <i class="fas fa-chart-line" aria-hidden="true"></i>
-                    <h3>Business &amp; Marketing Interest</h3>
-                    <p>Combining technical skills with an interest in how websites support online visibility, brand presentation, and customer contact.</p>
-                </article>
-            </div>
-        </div>
-    </section>
-
-    <!-- ============================================================
-         ABOUT SECTION
-         ============================================================ -->
-    <section id="about" class="reveal" aria-labelledby="about-heading">
-        <div class="container">
-            <div class="row">
-                <div class="about-col-1">
-                    <img src="projo/projo3.jpeg" alt="Derrick Ogetonto Mandela, Business IT student and web developer" loading="lazy" width="600" height="800">
-                </div>
-                <div class="about-col-2">
-                    <div class="section-header">
-                        <h2 class="sub-title" id="about-heading">About Me</h2>
-                    </div>
-                    <p>I am a Business Information Technology student and web developer with hands-on practice creating websites for different business concepts. I enjoy combining technology, design, and business understanding to build useful online experiences. I am interested in applying my web development and user-experience skills to support businesses with their online presence while developing my knowledge of digital marketing, content strategy, and search engine optimization.</p>
-
-                    <div class="tab-titles" role="tablist" aria-label="About me sections">
-                        <button class="tab-links active-link" onclick="opentab('skills', event)" role="tab" aria-selected="true" aria-controls="skills" id="tab-skills">
-                            <span class="tab-icon"><i class="fas fa-code" aria-hidden="true"></i></span>
-                            Skills
-                        </button>
-                        <button class="tab-links" onclick="opentab('experience', event)" role="tab" aria-selected="false" aria-controls="experience" id="tab-experience">
-                            <span class="tab-icon"><i class="fas fa-briefcase" aria-hidden="true"></i></span>
-                            Experience
-                        </button>
-                        <button class="tab-links" onclick="opentab('education', event)" role="tab" aria-selected="false" aria-controls="education" id="tab-education">
-                            <span class="tab-icon"><i class="fas fa-graduation-cap" aria-hidden="true"></i></span>
-                            Education
-                        </button>
-                    </div>
-
-                    <!-- Tab: Skills -->
-                    <div class="tab-contents active-tab" id="skills" role="tabpanel" aria-labelledby="tab-skills">
-                        <div class="skill-group">
-                            <h4>Web Development</h4>
-                            <p>HTML5, CSS3 (Flexbox, Grid), JavaScript (ES6+), responsive design, semantic markup</p>
-                        </div>
-                        <div class="skill-group">
-                            <h4>Programming &amp; Systems</h4>
-                            <p>Java, C++, C (coursework), basic database concepts, IT fundamentals</p>
-                        </div>
-                        <div class="skill-group">
-                            <h4>Web Structure &amp; Presentation</h4>
-                            <p>Page structure, content hierarchy, basic SEO concepts (titles, meta descriptions, alt text, headings), user experience principles</p>
-                        </div>
-                        <div class="skill-group">
-                            <h4>Currently Learning</h4>
-                            <p>Digital marketing fundamentals, content strategy, SEO best practices, online brand presentation</p>
-                        </div>
-                    </div>
-
-                    <!-- Tab: Experience -->
-                    <div class="tab-contents" id="experience" role="tabpanel" aria-labelledby="tab-experience">
-                        <div class="experience-item">
-                            <div class="exp-header">
-                                <h4>ICT Intern / Industrial Attachment Student</h4>
-                                <span class="exp-date">Aug 2025 – Nov 2025</span>
-                            </div>
-                            <p class="exp-company">Ministry of Education, State Department for Higher Education — Nairobi, Kenya</p>
-                            <ul class="exp-details">
-                                <li>Assisted with network setup, administration, monitoring, and LAN-related troubleshooting</li>
-                                <li>Supported software and hardware installation for staff</li>
-                                <li>Provided general ICT support and helped users with office applications</li>
-                                <li>Assisted with ICT equipment configuration and verification</li>
-                                <li>Helped maintain the ICT equipment inventory</li>
-                                <li>Supported power-system and backup maintenance activities</li>
-                            </ul>
-                        </div>
-                    </div>
-
-                    <!-- Tab: Education -->
-                    <div class="tab-contents" id="education" role="tabpanel" aria-labelledby="tab-education">
-                        <div class="education-item">
-                            <div class="edu-header">
-                                <h4>BSc. Business Information Technology</h4>
-                                <span class="edu-date">Expected 2027</span>
-                            </div>
-                            <p class="edu-institution">The Cooperative University of Kenya</p>
-                            <p class="edu-focus">Ongoing — 3rd year</p>
-                        </div>
-                        <div class="education-item">
-                            <div class="edu-header">
-                                <h4>Diploma in Information Technology</h4>
-                                <span class="edu-date">Completed 2025 · Credit</span>
-                            </div>
-                            <p class="edu-institution">The Cooperative University of Kenya</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- ============================================================
-         SKILLS / SERVICES SECTION
-         ============================================================ -->
-    <section id="services" class="reveal" aria-labelledby="services-heading">
-        <div class="container">
-            <h2 class="sub-title" id="services-heading">What I Can Help With</h2>
-            <div class="services-list">
-                <div>
-                    <i class="fas fa-code" aria-hidden="true"></i>
-                    <h3>Website Development</h3>
-                    <p>Building clean, responsive websites for business concepts using HTML, CSS, and JavaScript — focused on readability, structure, and mobile-friendly layouts.</p>
-                    <a href="#contact">Get in touch</a>
-                </div>
-                <div>
-                    <i class="fas fa-mobile-alt" aria-hidden="true"></i>
-                    <h3>Responsive Web Design</h3>
-                    <p>Making sure websites look and work well across desktop, tablet, and mobile devices using modern layout techniques.</p>
-                    <a href="#contact">Get in touch</a>
-                </div>
-                <div>
-                    <i class="fas fa-search" aria-hidden="true"></i>
-                    <h3>Web Structure &amp; Basic SEO</h3>
-                    <p>Applying basic SEO concepts like meaningful page titles, meta descriptions, heading hierarchy, and image alt text to improve structure and discoverability.</p>
-                    <a href="#contact">Get in touch</a>
-                </div>
-                <div>
-                    <i class="fas fa-lightbulb" aria-hidden="true"></i>
-                    <h3>Digital Marketing (Learning)</h3>
-                    <p>Currently developing knowledge in content strategy, online brand presentation, and SEO as I work toward part-time digital marketing opportunities.</p>
-                    <a href="#contact">Get in touch</a>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- ============================================================
-         PORTFOLIO SECTION — Honest project labels
-         ============================================================ -->
-    <section id="portfolio" class="reveal" aria-labelledby="portfolio-heading">
-        <div class="container">
-            <h2 class="sub-title" id="portfolio-heading">My Projects</h2>
-            <p class="portfolio-intro">These are personal web development projects and business website concepts I built to practise responsive design, UI, and business-focused presentation.</p>
-
-            <div class="work-list">
-                <!-- Project 1: Titan Timber & Hardware -->
-                <div class="work">
-                    <img src="projo/projo9.png" alt="Titan Timber & Hardware website concept preview" loading="lazy" width="600" height="400">
-                    <div class="layer">
-                        <span class="badge badge-orange">Business Website Concept</span>
-                        <h3>Titan Timber &amp; Hardware</h3>
-                        <p>A hardware and timber supplier website concept for Kitengela, designed to help visitors browse products, estimate costs, and contact the business directly.</p>
-                        <div class="tech-tags">
-                            <span>HTML</span> <span>CSS</span> <span>JavaScript</span> <span>WhatsApp Integration</span>
-                        </div>
-                        <div class="layer-actions">
-                            <a href="https://keen-rugelach-4c6637.netlify.app" target="_blank" rel="noopener noreferrer" aria-label="Open Titan Timber &amp; Hardware project in a new tab"><i class="fas fa-external-link-alt" aria-hidden="true"></i></a>
-                            <button type="button" class="portfolio-trigger" data-image="projo/projo9.png" data-title="Titan Timber &amp; Hardware" data-badge="Business Website Concept" data-description="A hardware and timber supplier website concept featuring a filterable product catalog (structural timber, marine plywood, cement, roofing nails, custom benches, door frames), fabrication services, an instant cost estimator with delivery zones, and a WhatsApp ordering flow to help visitors explore products and contact the business." aria-label="Preview Titan Timber &amp; Hardware"><i class="fas fa-search" aria-hidden="true"></i></button>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Project 2: Galaxy Resort Kitengela -->
-                <div class="work">
-                    <img src="projo/projo6.jpg" alt="Galaxy Resort Kitengela website concept preview" loading="lazy" width="600" height="400">
-                    <div class="layer">
-                        <span class="badge badge-blue">Hospitality Website Concept</span>
-                        <h3>Galaxy Resort Kitengela</h3>
-                        <p>A hospitality website concept presenting resort services, rooms, dining, events, and amenities with a clear, mobile-friendly layout.</p>
-                        <div class="tech-tags">
-                            <span>HTML</span> <span>CSS</span> <span>Responsive Layout</span>
-                        </div>
-                        <div class="layer-actions">
-                            <a href="https://chic-scone-d96e36.netlify.app" target="_blank" rel="noopener noreferrer" aria-label="Open Galaxy Resort project in a new tab"><i class="fas fa-external-link-alt" aria-hidden="true"></i></a>
-                            <button type="button" class="portfolio-trigger" data-image="projo/projo6.jpg" data-title="Galaxy Resort Kitengela" data-badge="Hospitality Website Concept" data-description="A hospitality website concept presenting resort services and business information — rooms, dining, events, spa, and location — with clear navigation and mobile-friendly access to information." aria-label="Preview Galaxy Resort Kitengela"><i class="fas fa-search" aria-hidden="true"></i></button>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Project 3: Kangale Jumbe & Co. Advocates -->
-                <div class="work">
-                    <img src="projo/projo8.png" alt="Kangale Jumbe & Co. Advocates website concept preview" loading="lazy" width="600" height="400">
-                    <div class="layer">
-                        <span class="badge badge-green">Legal Services Website Concept</span>
-                        <h3>Kangale Jumbe &amp; Co. Advocates</h3>
-                        <p>A legal-services website concept presenting practice areas and consultation contact options with a professional, organised layout.</p>
-                        <div class="tech-tags">
-                            <span>HTML</span> <span>CSS</span> <span>WhatsApp Contact</span>
-                        </div>
-                        <div class="layer-actions">
-                            <a href="https://ogstech-dev.github.io/kangale-jumbe-and-Co-advocates/" target="_blank" rel="noopener noreferrer" aria-label="Open Kangale Jumbe &amp; Co. Advocates project in a new tab"><i class="fas fa-external-link-alt" aria-hidden="true"></i></a>
-                            <button type="button" class="portfolio-trigger" data-image="projo/projo8.png" data-title="Kangale Jumbe &amp; Co. Advocates" data-badge="Legal Services Website Concept" data-description="A legal-services website concept for a Kitengela-based law firm — presenting four core practice areas (conveyancing &amp; property, civil litigation, commercial law, family law), office location, and consultation contact options with a clear, professional layout." aria-label="Preview Kangale Jumbe &amp; Co. Advocates"><i class="fas fa-search" aria-hidden="true"></i></button>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Project 4: Kiki's Kitchen -->
-                <div class="work">
-                    <img src="projo/projo5.jpg" alt="Kiki's Kitchen restaurant website concept preview" loading="lazy" width="600" height="400">
-                    <div class="layer">
-                        <span class="badge badge-orange">Food Brand Website Concept</span>
-                        <h3>Kiki's Kitchen</h3>
-                        <p>A restaurant and food-brand website concept focused on menu presentation, brand identity, and convenient mobile browsing.</p>
-                        <div class="tech-tags">
-                            <span>HTML</span> <span>CSS</span> <span>Responsive Layout</span>
-                        </div>
-                        <div class="layer-actions">
-                            <a href="https://kikiskitchen.netlify.app/" target="_blank" rel="noopener noreferrer" aria-label="Open Kiki's Kitchen project in a new tab"><i class="fas fa-external-link-alt" aria-hidden="true"></i></a>
-                            <button type="button" class="portfolio-trigger" data-image="projo/projo5.jpg" data-title="Kiki's Kitchen" data-badge="Food Brand Website Concept" data-description="A restaurant and food-brand website concept focused on menu presentation, brand identity, and convenient browsing — designed with an appetising visual tone and mobile-first layout." aria-label="Preview Kiki's Kitchen"><i class="fas fa-search" aria-hidden="true"></i></button>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Project 5: Ivy Interactive Portfolio -->
-                <div class="work">
-                    <img src="projo/projo1.png" alt="Ivy Interactive Portfolio project preview" loading="lazy" width="600" height="400">
-                    <div class="layer">
-                        <span class="badge badge-blue">Portfolio Project</span>
-                        <h3>Ivy Interactive Portfolio</h3>
-                        <p>A portfolio website project focused on layout, visual presentation, and user-interface design.</p>
-                        <div class="tech-tags">
-                            <span>HTML</span> <span>CSS</span> <span>UI Design</span>
-                        </div>
-                        <div class="layer-actions">
-                            <a href="https://ivy-portfolio.netlify.app/" target="_blank" rel="noopener noreferrer" aria-label="Open Ivy Interactive Portfolio in a new tab"><i class="fas fa-external-link-alt" aria-hidden="true"></i></a>
-                            <button type="button" class="portfolio-trigger" data-image="projo/projo1.png" data-title="Ivy Interactive Portfolio" data-badge="Portfolio Project" data-description="A portfolio website project focused on layout, typography, visual presentation, and user-interface design." aria-label="Preview Ivy Interactive Portfolio"><i class="fas fa-search" aria-hidden="true"></i></button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Recruiter / Contact CTA -->
-            <div class="portfolio-hire-cta reveal">
-                <h3>Interested in working together?</h3>
-                <p>I'm open to part-time digital marketing and web support opportunities.</p>
-                <div class="portfolio-cta-actions">
-                    <a href="https://github.com/ogstech-dev" class="btn btn2" target="_blank" rel="noopener noreferrer">
-                        <i class="fab fa-github" aria-hidden="true"></i>
-                        See more on GitHub
-                    </a>
-                    <a href="#contact" class="btn btn-hire">
-                        <i class="fas fa-paper-plane" aria-hidden="true"></i>
-                        Contact Me
-                    </a>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- ============================================================
-         CONTACT SECTION
-         ============================================================ -->
-    <section id="contact" class="reveal" aria-labelledby="contact-heading">
-        <div class="container">
-            <div class="row">
-                <div class="contact-left">
-                    <h2 class="sub-title" id="contact-heading">Contact Me</h2>
-                    <p><i class="fas fa-user" aria-hidden="true"></i> Derrick Ogetonto Mandela</p>
-                    <p><i class="fas fa-paper-plane" aria-hidden="true"></i> <a href="mailto:derrickogetonto161@gmail.com" class="contact-link">derrickogetonto161@gmail.com</a></p>
-                    <p><i class="fas fa-phone" aria-hidden="true"></i> <a href="tel:+254794994170" class="contact-link">+254 794 994 170</a></p>
-                    <div class="wa-contact-links">
-                        <a href="https://wa.me/254794994170?text=Hello%20Derrick%2C%20I%27d%20like%20to%20discuss%20a%20part-time%20digital%20marketing%20or%20web%20role." target="_blank" rel="noopener noreferrer"><i class="fab fa-whatsapp" aria-hidden="true"></i> WhatsApp — Part-time roles</a>
-                        <a href="https://wa.me/254794994170?text=Hello%20Derrick%2C%20I%27d%20like%20to%20discuss%20a%20web%20development%20project." target="_blank" rel="noopener noreferrer"><i class="fab fa-whatsapp" aria-hidden="true"></i> WhatsApp — Web projects</a>
-                    </div>
-                    <div class="social-icons">
-                        <a href="https://github.com/ogstech-dev" target="_blank" rel="noopener noreferrer" aria-label="GitHub profile"><i class="fab fa-github" aria-hidden="true"></i></a>
-                        <a href="https://ogstech-dev.github.io/" target="_blank" rel="noopener noreferrer" aria-label="Portfolio website"><i class="fas fa-globe" aria-hidden="true"></i></a>
-                    </div>
-                    <a href="./DERRICK_OGETONTO_CV.pdf" download class="btn btn2">Download CV (PDF)</a>
-                </div>
-                <div class="contact-right">
-                    <form name="submit-to-google-sheet" aria-label="Contact form">
-                        <label for="contact-name" class="sr-only">Your Name</label>
-                        <input type="text" id="contact-name" name="Name" placeholder="Your Name" required aria-required="true" autocomplete="name">
-                        <label for="contact-email" class="sr-only">Your Email</label>
-                        <input type="email" id="contact-email" name="Email" placeholder="Your Email" required aria-required="true" autocomplete="email">
-                        <label for="contact-message" class="sr-only">Message</label>
-                        <textarea id="contact-message" name="Message" rows="6" placeholder="Tell me about the opportunity or project..." required aria-required="true"></textarea>
-                        <button type="submit" class="btn btn3">Send Message</button>
-                    </form>
-                </div>
-            </div>
-        </div>
-    </section>
+    </main>
 
     <!-- ============================================================
          FLOATING WHATSAPP
@@ -486,7 +493,7 @@
     <div class="lightbox" id="lightbox" aria-hidden="true" role="dialog" aria-modal="true" aria-label="Project preview">
         <div class="lightbox-content">
             <button type="button" class="lightbox-close" aria-label="Close preview">×</button>
-            <img id="lightbox-image" src="" alt="Project preview">
+            <img id="lightbox-image" src="" alt="Project preview" width="1200" height="675">
             <div class="lightbox-text">
                 <span class="lightbox-badge" id="lightbox-badge">Project</span>
                 <h3 id="lightbox-title">Project Title</h3>
