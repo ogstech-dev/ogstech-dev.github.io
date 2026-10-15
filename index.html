@@ -12,7 +12,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <!-- Main Stylesheet -->
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css?v=5">
 </head>
 <body>
 
@@ -291,7 +291,7 @@
                     </div>
                 </div>
 
-                <!-- Project 2: Titan Timber & Hardware (REPLACED Stellular) -->
+                <!-- Project 2: Titan Timber & Hardware -->
                 <div class="work">
                     <img src="projo/projo9.png" alt="Titan Timber & Hardware website preview" loading="lazy" width="600" height="400">
                     <div class="layer">
@@ -377,14 +377,20 @@
                 </div>
             </div>
 
-            <!-- Recruiter CTA -->
+            <!-- Recruiter CTA + GitHub -->
             <div class="portfolio-hire-cta reveal">
                 <h3>Impressed by what you've seen?</h3>
                 <p>Let's build something remarkable together.</p>
-                <a href="#contact" class="btn btn-hire">
-                    <i class="fas fa-bolt" aria-hidden="true"></i>
-                    Hire Me to Unlock My Potential
-                </a>
+                <div class="portfolio-cta-actions">
+                    <a href="https://github.com/DerrickOgetonto" class="btn btn2" target="_blank" rel="noopener noreferrer">
+                        <i class="fab fa-github" aria-hidden="true"></i>
+                        See more on GitHub
+                    </a>
+                    <a href="#contact" class="btn btn-hire">
+                        <i class="fas fa-bolt" aria-hidden="true"></i>
+                        Hire Me to Unlock My Potential
+                    </a>
+                </div>
             </div>
         </div>
     </section>
@@ -578,7 +584,7 @@
             window.closemenu = function() {
                 if (sidemenu) {
                     sidemenu.classList.remove('active');
-                    sidemenu.style.right = '-320px';
+                    sidemenu.style.right = '-340px';
                 }
                 if (mobileOverlay) {
                     mobileOverlay.classList.remove("active");
