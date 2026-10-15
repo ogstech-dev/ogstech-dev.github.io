@@ -607,7 +607,7 @@ button.menu-close i {
     text-transform: uppercase;
 }
 
-.header-panel h3 {
+.header-panel .panel-heading {
     margin-top: 18px;
     font-size: 1.7rem;
     margin-bottom: 22px;
@@ -996,7 +996,7 @@ button.menu-close i {
     transform: translateX(4px);
 }
 
-.skill-group h4 {
+.skill-group h3 {
     color: var(--accent-pink);
     font-size: 1rem;
     font-weight: 700;
@@ -1036,8 +1036,8 @@ button.menu-close i {
     flex-wrap: wrap;
 }
 
-.exp-header h4,
-.edu-header h4 {
+.exp-header h3,
+.edu-header h3 {
     color: #fff;
     font-size: 1rem;
     font-weight: 700;
