@@ -213,8 +213,11 @@ textarea:focus-visible,
     body::before,
     #header::before,
     #header::after,
-    .header-panel {
-        animation: none;
+    .header-panel,
+    .hire-badge,
+    .hire-floating,
+    .btn-hire {
+        animation: none !important;
     }
     .reveal {
         opacity: 1;
@@ -429,7 +432,7 @@ button.hamburger-btn {
     cursor: pointer;
     line-height: 1;
     color: #fff;
-    z-index: 10000;
+    z-index: 10;
     position: relative;
     transition: transform var(--transition-fast);
     -webkit-tap-highlight-color: transparent;
@@ -1693,7 +1696,7 @@ form textarea:focus {
 }
 
 /* ============================================================
-   13. LEGAL MODAL (Privacy / Terms)
+   13. LEGAL MODAL
    ============================================================ */
 .legal-modal {
     position: fixed;
@@ -1783,7 +1786,7 @@ form textarea:focus {
 }
 
 /* ============================================================
-   14. HIRE ME — BUTTONS, BANNER, FLOATING CTA
+   14. HIRE ME SYSTEM
    ============================================================ */
 
 .btn.btn-hire {
@@ -1818,7 +1821,7 @@ form textarea:focus {
     100% { background-position: 0% 50%; }
 }
 
-/* ---------- Hire Banner Section ---------- */
+/* Hire Banner */
 .hire-banner {
     padding: 60px 0 40px;
     position: relative;
@@ -2000,7 +2003,7 @@ form textarea:focus {
     to { transform: rotate(360deg); }
 }
 
-/* ---------- Floating Hire Me Button ---------- */
+/* Floating Hire Me */
 .hire-floating {
     position: fixed;
     right: 24px;
@@ -2039,7 +2042,7 @@ form textarea:focus {
     50%      { box-shadow: 0 18px 35px rgba(255, 0, 79, 0.45), 0 0 0 12px rgba(255, 77, 141, 0); }
 }
 
-/* ---------- Portfolio CTA at bottom of My Work ---------- */
+/* Portfolio Hire CTA + GitHub */
 .portfolio-hire-cta {
     margin-top: 60px;
     padding: 36px 28px;
@@ -2064,38 +2067,79 @@ form textarea:focus {
     font-size: 1rem;
 }
 
-.portfolio-hire-cta .btn {
+.portfolio-cta-actions {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 14px;
+    margin-top: 8px;
+}
+
+.portfolio-cta-actions .btn {
     margin: 0;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.portfolio-cta-actions .btn i {
+    font-size: 1em;
 }
 
 /* ============================================================
    15. RESPONSIVE MEDIA QUERIES
    ============================================================ */
 
+/* ---------- TABLET & MOBILE: sidebar nav + stacking ---------- */
 @media only screen and (max-width: 860px) {
+
     .container {
         padding: 10px 6%;
     }
 
+    /* -------- Hamburger: visible on mobile -------- */
     button.hamburger-btn {
-        display: block;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 44px;
+        height: 44px;
+        padding: 0;
+        border-radius: 12px;
+        background: rgba(255, 77, 141, 0.1);
+        border: 1px solid rgba(255, 77, 141, 0.3);
+        transition: background 0.2s ease, border-color 0.2s ease, transform 0.2s ease;
     }
 
+    button.hamburger-btn:hover {
+        background: rgba(255, 77, 141, 0.2);
+        border-color: rgba(255, 77, 141, 0.5);
+        transform: scale(1.05);
+    }
+
+    button.hamburger-btn i {
+        font-size: 1.35rem;
+    }
+
+    /* -------- Sidebar: wider, cleaner, with proper spacing -------- */
     nav ul#sidemenu {
         background: #0b0f17 !important;
         border-left: 1px solid var(--border-light);
         box-shadow: -5px 0 25px rgba(0, 0, 0, 0.5);
         position: fixed;
         top: 0;
-        right: -320px;
-        width: 280px !important;
+        right: -340px;
+        width: 300px !important;
+        max-width: 85vw;
         height: 100vh !important;
-        padding: 72px 18px 32px;
+        height: 100dvh !important;
+        padding: 88px 22px 40px;
         z-index: 9999 !important;
         transition: right 0.35s ease;
         display: flex;
         flex-direction: column;
-        gap: 10px;
+        gap: 12px;
         overflow-y: auto;
         list-style: none;
     }
@@ -2104,22 +2148,61 @@ form textarea:focus {
         right: 0;
     }
 
+    /* -------- Close button: positioned cleanly in top-right -------- */
     nav ul#sidemenu li.menu-close-item {
         display: block;
         position: absolute;
-        top: 18px;
-        right: 18px;
+        top: 20px;
+        right: 20px;
         margin: 0;
         padding: 0;
         background: transparent;
         border: none;
+        z-index: 10000;
+    }
+
+    button.menu-close {
+        background: rgba(255, 77, 141, 0.15);
+        border: 1px solid rgba(255, 77, 141, 0.35);
+        color: #fff;
+        font-size: 1.15rem;
+        cursor: pointer;
+        padding: 0;
+        width: 40px;
+        height: 40px;
+        line-height: 1;
+        border-radius: 50%;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        transition: background 0.2s ease, border-color 0.2s ease, transform 0.2s ease;
+    }
+
+    button.menu-close:hover {
+        background: rgba(255, 77, 141, 0.3);
+        border-color: rgba(255, 77, 141, 0.6);
+        transform: rotate(90deg);
+    }
+
+    button.menu-close i {
+        color: #fff;
+        font-size: 1.15rem;
+        pointer-events: none;
+    }
+
+    /* -------- Nav links: bigger, cleaner hit area -------- */
+    nav ul#sidemenu li {
+        display: block;
+        margin: 0;
     }
 
     nav ul#sidemenu li a {
-        display: block;
-        padding: 16px 18px;
-        border-radius: var(--radius-sm);
-        font-size: 1.05rem;
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        padding: 18px 22px;
+        border-radius: 14px;
+        font-size: 1.08rem;
         color: #ffffff;
         font-weight: 700;
         letter-spacing: 0.02em;
@@ -2127,18 +2210,37 @@ form textarea:focus {
         border: 1px solid var(--border-light);
         text-decoration: none;
         line-height: 1.4;
-        transition: background var(--transition-fast), border-color var(--transition-fast), transform var(--transition-fast);
+        transition: background 0.2s ease, border-color 0.2s ease, transform 0.2s ease;
+        position: relative;
+        overflow: hidden;
+    }
+
+    nav ul#sidemenu li a::before {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 0;
+        height: 100%;
+        width: 3px;
+        background: linear-gradient(180deg, var(--accent-pink), var(--accent-magenta));
+        transform: translateX(-100%);
+        transition: transform 0.3s ease;
     }
 
     nav ul#sidemenu li a:hover,
     nav ul#sidemenu li a:focus {
-        background: linear-gradient(135deg, var(--accent-pink), var(--accent-magenta));
-        border-color: transparent;
-        color: #ffffff;
+        background: rgba(255, 77, 141, 0.1);
+        border-color: rgba(255, 77, 141, 0.4);
         transform: translateX(-4px);
-        box-shadow: 4px 0 20px rgba(255, 0, 79, 0.4);
+        color: #fff;
     }
 
+    nav ul#sidemenu li a:hover::before,
+    nav ul#sidemenu li a:focus::before {
+        transform: translateX(0);
+    }
+
+    /* -------- Header stacks -------- */
     .header-text {
         flex-direction: column;
         align-items: flex-start;
@@ -2154,6 +2256,7 @@ form textarea:focus {
         flex: 1 1 100%;
     }
 
+    /* -------- About / contact stack -------- */
     .about-col-1,
     .about-col-2,
     .contact-left,
@@ -2187,7 +2290,7 @@ form textarea:focus {
         width: 100%;
     }
 
-    /* Hire banner responsive */
+    /* -------- Hire banner responsive -------- */
     .hire-banner-inner {
         flex-direction: column;
         text-align: center;
@@ -2227,6 +2330,7 @@ form textarea:focus {
     }
 }
 
+/* ---------- SMALL PHONES ---------- */
 @media only screen and (max-width: 600px) {
     #header {
         background:
@@ -2403,8 +2507,19 @@ form textarea:focus {
         padding: 28px 20px;
         margin-top: 40px;
     }
+
+    .portfolio-cta-actions {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .portfolio-cta-actions .btn {
+        width: 100%;
+        justify-content: center;
+    }
 }
 
+/* ---------- EXTRA SMALL DEVICES ---------- */
 @media only screen and (max-width: 380px) {
     .header-text h1 {
         font-size: 1.8rem;
